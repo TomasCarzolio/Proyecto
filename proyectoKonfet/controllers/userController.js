@@ -2,20 +2,23 @@ const data = require("../db/data");
 
 const indexController = {
     header: function(req, res){
-    res.render()
+    res.render('header')
     }, 
 
     footer: function(req, res){
-    res.render()
+    res.render('footer')
     }, 
 
-    register: function(req, res){
-    res.render()
+    profile: function(req, res){
+        res.render('profile')
     }, 
 
-    register: function(req, res){
-    res.render()
+    profileEdit: function(req, res){
+        res.render('profile-edit')
     }, 
+   
+
+    
 }
 
 module.exports = (indexController);
