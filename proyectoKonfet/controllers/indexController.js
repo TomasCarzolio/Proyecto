@@ -12,7 +12,11 @@ const indexController = {
     },
     searchResults : function (req, res) {
         res.render('search-results')
-    }
+    }, 
+    headerLogueado: function(req, res){
+        res.render('headerLogueado')
+        }, 
+    
 }
 
 module.exports = indexController;
