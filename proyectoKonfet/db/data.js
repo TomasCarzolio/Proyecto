@@ -1,4 +1,4 @@
-const datos = {
+let datos = {
     usuario: {},
 
     productos:
