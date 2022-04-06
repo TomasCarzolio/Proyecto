@@ -1,21 +1,16 @@
-const data = require("../db/data");
+const data = require('../db/data')
 
 const indexController = {
-    header: function(req, res){
-    res.render()
-    }, 
-
-    footer: function(req, res){
-    res.render()
-    }, 
-
-    register: function(req, res){
-    res.render()
-    }, 
-
-    register: function(req, res){
-    res.render()
-    }, 
+    index : function (req, res) {
+        res.render('index')
+    },
+    register : function (req, res) {
+        res.render('register')
+    },
+    login : function (req, res) {
+        res.render('login')
+    },
+    
 }
 
-module.exports = (indexController);
+module.exports = indexController;
