@@ -1,5 +1,6 @@
 let datos = {
     usuario: {
+        nombreUsuario: "perezlisandro",
         nombre: "Lisandro",
         apellido: "Perez",
         email: "lperez@gmail.com",
