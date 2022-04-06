@@ -1,12 +1,8 @@
 const data = require("../db/data");
 
 const indexController = {
-    header: function(req, res){
-    res.render('header')
-    }, 
-
-    footer: function(req, res){
-    res.render('footer')
+    headerLogeado : function(req, res){
+    res.render('headerLogeado')
     }, 
 
     profile: function(req, res){
@@ -17,8 +13,6 @@ const indexController = {
         res.render('profile-edit')
     }, 
    
-
-    
 }
 
 module.exports = (indexController);

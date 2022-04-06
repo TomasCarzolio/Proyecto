@@ -10,9 +10,7 @@ const indexController = {
     login : function (req, res) {
         res.render('login')
     },
-    searchResults : function (req, res) {
-        res.render('search-results')
-    }, 
+ 
     headerLogueado: function(req, res){
         res.render('headerLogueado')
         }, 
