@@ -5,7 +5,7 @@ let data = {
         apellido: "Perez",
         email: "lperez@gmail.com",
         fechaDeNac: 02 / 02 / 1982,
-        numeroDeDoc: 44189323,
+        dni: 44189323,
         fotoDePerfil: "/images/retrato.jpeg",
     },
 
@@ -17,6 +17,7 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 03 / 04 / 2022,
                 precio: "$2000",
+                descripcion : 'No te lo pierdas!!!'
             },
             {
                 id: 2,
@@ -24,6 +25,7 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 01 / 02 / 2022,
                 precio: "$3000",
+                descripcion : 'No te lo pierdas!!!'
             },
             {
                 id: 3,
@@ -31,6 +33,7 @@ let data = {
                 lugar: "Obras",
                 fecha: 05 / 09 / 2023,
                 precio: "$2000",
+                descripcion : 'No te lo pierdas!!!'
             },
             {
                 id: 4,
@@ -38,6 +41,7 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 08 / 10 / 2022,
                 precio: "$1000",
+                descripcion : 'No te lo pierdas!!!'
             },
             {
                 id: 5,
@@ -52,6 +56,7 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 25 / 04 / 2022,
                 precio: "$2500",
+                descripcion : 'No te lo pierdas!!!'
             },
             {
                 id: 7,
@@ -59,6 +64,7 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 02 / 02 / 2023,
                 precio: "$3000",
+                descripcion : 'No te lo pierdas!!!'
             },
             {
                 id: 8,
@@ -66,6 +72,7 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 15 / 06 / 2024,
                 precio: "$5000",
+                descripcion : 'No te lo pierdas!!!'
             },
             {
                 id: 9,
@@ -73,6 +80,7 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 22 / 09 / 2022,
                 precio: "$2000",
+                descripcion : 'No te lo pierdas!!!'
             },
             {
                 id: 10,
@@ -80,7 +88,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 12 / 08 / 2022,
                 precio: "$3000",
-            },
+                descripcion : 'No te lo pierdas!!!'
+            }
         ],
 
     comentarios: [
