@@ -1,4 +1,4 @@
-let datos = {
+let data = {
     usuario: {
         nombreUsuario: "perezlisandro",
         nombre: "Lisandro",
@@ -128,4 +128,4 @@ let datos = {
 };
 
 
-module.exports = datos;
+module.exports = data;
