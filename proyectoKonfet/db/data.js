@@ -5,7 +5,7 @@ let datos = {
         apellido: "Perez",
         email: "lperez@gmail.com",
         fechaDeNac: 02 / 02 / 1982,
-        numeroDeDoc: 44189323,
+        dni: 44189323,
         fotoDePerfil: "/images/retrato.jpeg",
     },
 
