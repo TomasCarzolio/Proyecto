@@ -18,7 +18,7 @@
 
 <body>
 	<!-- Header -->
-	<%- Include('./partials/header') %>
+	<%- include('./partials/header') %>
 		<!-- /Header -->
 
 		<!-- product detail -->
@@ -39,37 +39,30 @@
 								<%= productos[i].descripcion %>
 							</p>
 						</article>
-						<% } %>
+						<div class="col-12 col-lg-4">
+							<section class="comments">
+								<article>
+									<img src="https://via.placeholder.com/35" alt="">
+									<div class="data">
+										<p class="user">
+											<strong> <a href="/profile"> Nombre usuario: <%= user.nombreUsuario %> </a>
+											</strong>
+											<%= comentarios[i].comentario %>
+										</p>
+									</div>
+								</article>
+								<% } %>
 
-							<% for(let i=0; i < productos.length; i++) { %>
-								<div class="col-12 col-lg-4">
-									<section class="comments">
-										<article>
-											<img src="https://via.placeholder.com/35" alt="">
-											<div class="data">
-												<p class="user">
-													<strong> <a href="/profile"> Nombre usuario: <%= user[i].nombreUsuario %> </a>
-													</strong>
-													<%= comentarios[i].comentario %>
-												</p>
-											</div>
-										</article>
-										<% } %>
+							</section>
+							<form class="form" action="" method="POST">
+								<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+								<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+							</form>
 
-									</section>
-									<form class="form" action="" method="POST">
-										<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-										<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-									</form>
+							<!-- /product detail -->
 
-									<!-- /product detail -->
-
-									<!-- footer -->
-									<%- Include('./partials/footer') %>
-										<!-- /footer -->
-
-	<!-- footer -->
-	<%- include('./partials/footer') %>
-	<!-- /footer -->
+							<!-- footer -->
+							<%- include('./partials/footer') %>
+								<!-- /footer -->
 
 </html>
