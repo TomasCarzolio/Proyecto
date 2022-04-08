@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<!-- Include Head -->
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link width="" rel="shortcut icon" href="./images/logo-mercado-liebre.jpg" />
-	
-	<title> Mercado Liebre Argentina</title>
-			<!-- Font Awesome Stylesheet -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-	<!-- Bootstrap Grid Stylesheet -->
-	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
-	<!-- Own Stylesheet -->
-	<link rel="stylesheet" href="./css/app.css">
-</head>
-<body>
-	<!-- Header -->
-	<%- include('./partials/headerLogueado')%>
+<!-- Header -->
+<%- include('./partials/headerLogueado')%>
 	<!-- /Header -->
 
 	<!-- Datos del usuario -->
@@ -27,10 +10,11 @@
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"><%= datos.usuario.nombreUsuario %> 
-						<a href="profile-edit.html">
-							<i class="fas fa-cog"></i>
-						</a>
+					<h1 class="main-title">
+						<%= datos.usuario.nombreUsuario %>
+							<a href="profile-edit.html">
+								<i class="fas fa-cog"></i>
+							</a>
 					</h1>
 					<a class="btn mt-3 ml-4" href="">SEGUIR</a>
 				</div>
@@ -49,22 +33,26 @@
 	<!-- Mis productos -->
 	<div class="container products-wrapper">
 		<div class="row">
-			<%= for (let i = 0; i < datos.productos.length; i++) { %>
+			<%= for (let i=0; i < datos.productos.length; i++) { %>
 				<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/:<%= datos.productos[i].id %> ">
-						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2><%= datos.productos[i].artista %> - <%= datos.productos[i].lugar %> </h2>
-							<p> <%= datos.productos[i].fecha %> - <%= datos.productos[i].precio %> </p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>;
-			<%= } %> 
+					<section class="product-box">
+						<a href="/:<%= datos.productos[i].id %> ">
+							<figure class="product-box_image">
+								<img src="images/products/default-image.png" alt="cafetera moulinex">
+							</figure>
+							<article class="product-box_data">
+								<h2>
+									<%= datos.productos[i].artista %> - <%= datos.productos[i].lugar %>
+								</h2>
+								<p>
+									<%= datos.productos[i].fecha %> - <%= datos.productos[i].precio %>
+								</p>
+								<p>Comentarios: 12</p>
+							</article>
+						</a>
+					</section>
+				</div>;
+				<%= } %>
 		</div>
 	</div>
 	<!-- /Mis productos -->
@@ -72,6 +60,4 @@
 
 	<!-- footer -->
 	<%- include('./partials/footer') %>
-	<!-- /footer -->
-</body>	
-</html>
+		<!-- /footer -->

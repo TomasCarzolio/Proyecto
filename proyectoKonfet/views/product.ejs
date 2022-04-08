@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<!-- Include Head -->
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link width="" rel="shortcut icon" href="./images/logo-mercado-liebre.jpg" />
-
-	<title> Mercado Liebre Argentina</title>
-	<!-- Font Awesome Stylesheet -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-	<!-- Bootstrap Grid Stylesheet -->
-	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
-	<!-- Own Stylesheet -->
-	<link rel="stylesheet" href="./css/app.css">
-</head>
-
-<body>
 	<!-- Header -->
 	<%- include('./partials/header') %>
 		<!-- /Header -->
@@ -53,16 +34,26 @@
 								</article>
 								<% } %>
 
-							</section>
-							<form class="form" action="" method="POST">
-								<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-								<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-							</form>
+							<% for(let i=0; i < productos.length; i++) { %>
+								<div class="col-12 col-lg-4">
+									<section class="comments">
+										<article>
+											<img src="https://via.placeholder.com/35" alt="">
+											<div class="data">
+												<p class="user">
+													<strong> <a href="/profile"> Nombre usuario: <%=
+																user[i].nombreUsuario %> </a>
+													</strong>
+													<%= comentarios[i].comentario %>
+												</p>
+											</div>
+										</article>
+										<% } %>
 
 							<!-- /product detail -->
 
-							<!-- footer -->
-							<%- include('./partials/footer') %>
-								<!-- /footer -->
+									<!-- /product detail -->
 
-</html>
+									<!-- footer -->
+									<%- include('./partials/footer') %>
+										<!-- /footer -->
