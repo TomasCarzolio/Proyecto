@@ -6,6 +6,4 @@ router.get('/profile', userController.profile);
 
 router.get('/profile/edit', userController.profileEdit);
 
-router.get('/', userController.profile);
-
 module.exports = router;
