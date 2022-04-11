@@ -17,7 +17,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 03 / 04 / 2022,
                 precio: "$2000",
-                descripcion : 'No te lo pierdas!!!'
+                descripcion : 'No te lo pierdas!!!',
+                foto: '/images/products/daddy.jpg'
             },
             {
                 id: 2,
@@ -25,7 +26,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 01 / 02 / 2022,
                 precio: "$3000",
-                descripcion : 'No te lo pierdas!!!'
+                descripcion : 'No te lo pierdas!!!',
+                foto: '/images/products/badbunny.jpg'
             },
             {
                 id: 3,
@@ -33,7 +35,8 @@ let data = {
                 lugar: "Obras",
                 fecha: 05 / 09 / 2023,
                 precio: "$2000",
-                descripcion : 'No te lo pierdas!!!'
+                descripcion : 'No te lo pierdas!!!',
+                foto: '/images/products/mars.jpg'
             },
             {
                 id: 4,
@@ -41,7 +44,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 08 / 10 / 2022,
                 precio: "$1000",
-                descripcion : 'No te lo pierdas!!!'
+                descripcion : 'No te lo pierdas!!!',
+                foto: '/images/products/nickyjam.jpg'
             },
             {
                 id: 5,
@@ -49,6 +53,7 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 01 / 12 / 2024,
                 precio: "$500",
+                foto: '/images/products/becerra.jpg'
             },
             {
                 id: 6,
@@ -56,7 +61,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 25 / 04 / 2022,
                 precio: "$2500",
-                descripcion : 'No te lo pierdas!!!'
+                descripcion : 'No te lo pierdas!!!',
+                foto: '/images/products/duki.jpg'
             },
             {
                 id: 7,
@@ -64,7 +70,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 02 / 02 / 2023,
                 precio: "$3000",
-                descripcion : 'No te lo pierdas!!!'
+                descripcion : 'No te lo pierdas!!!',
+                foto: '/images/products/emimernes.jpg'
             },
             {
                 id: 8,
@@ -72,7 +79,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 15 / 06 / 2024,
                 precio: "$5000",
-                descripcion : 'No te lo pierdas!!!'
+                descripcion : 'No te lo pierdas!!!',
+                foto: '/images/products/tiago.jpg'
             },
             {
                 id: 9,
@@ -80,7 +88,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 22 / 09 / 2022,
                 precio: "$2000",
-                descripcion : 'No te lo pierdas!!!'
+                descripcion : 'No te lo pierdas!!!',
+                foto: '/images/products/killah.jpg'
             },
             {
                 id: 10,
@@ -88,7 +97,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: 12 / 08 / 2022,
                 precio: "$3000",
-                descripcion : 'No te lo pierdas!!!'
+                descripcion : 'No te lo pierdas!!!',
+                foto: '/images/products/nicki.jpg'
             }
         ],
 
