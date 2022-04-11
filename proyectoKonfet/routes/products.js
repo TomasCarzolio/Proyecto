@@ -5,6 +5,6 @@ var productController = require('../controllers/productController')
 /* GET users listing. */
 router.get('/:product', productController.product);
 
-router.get('/productAdd', productController.productAdd);
+router.get('/add', productController.productAdd);
 
 module.exports = router;
