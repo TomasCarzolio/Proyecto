@@ -1,17 +1,17 @@
-<body>
-	<!-- Header -->
-	<%- Include('./partials/header') %>
-		<!-- /Header -->
+<!-- Header -->
+<%- include('./partials/header') %>
+	<!-- /Header -->
 
-		<!-- product detail -->
-		<div class="container products-wrapper">
-			<div class="d-flex align-items-center">
-				<h2 class="products-title">Nombre del producto</h2>
-				<p class="product-detail-description">
-					<a href="/product-add"> Editar </a>
-				</p>
-			</div>
+	<!-- product detail -->
+	<div class="container products-wrapper">
+		<div class="d-flex align-items-center">
+			<h2 class="products-title">Nombre del producto</h2>
+			<p class="product-detail-description">
+				<a href="/products/productAdd"> Editar </a>
+			</p>
+		</div>
 
+<<<<<<< HEAD
 			<% for (let i=0; i < productos.length; i++) { %>
 				<div class="product-detail">
 					<div class="row">
@@ -22,31 +22,48 @@
 							</p>
 						</article>
 						<% } %>
+=======
+		<% for (let i=0; i < productos.length; i++) { %>
+			<div class="product-detail">
+				<div class="row">
+					<article class="col-12 col-lg-8 product-detail-info">
+						<img src="/images/products/default-image.png" alt="" class="product-detail-img">
+						<p class="product-detail-description">
+							<%= productos[i].descripcion %>
+						</p>
+					</article>
+					<div class="col-12 col-lg-4">
+						<section class="comments">
+							<article>
+								<img src="https://via.placeholder.com/35" alt="">
+								<div class="data">
+									<p class="user">
+										<strong> <a href="/profile"> Nombre usuario: <%= user.nombreUsuario %> </a>
+										</strong>
+										<%= comentarios[i].comentario %>
+									</p>
+								</div>
+							</article>
+							<div class="col-12 col-lg-4">
+								<section class="comments">
+									<article>
+										<img src="https://via.placeholder.com/35" alt="">
+										<div class="data">
+											<p class="user">
+												<strong> <a href="/profile"> Nombre usuario: <%= user.nombreUsuario %>
+													</a>
+												</strong>
+												<%= comentarios[i].comentario %>
+											</p>
+										</div>
+									</article>
+									<% } %>
+>>>>>>> 961cfb786574f539cf94b360edfa45a34c9c10e1
 
-							<% for(let i=0; i < productos.length; i++) { %>
-								<div class="col-12 col-lg-4">
-									<section class="comments">
-										<article>
-											<img src="https://via.placeholder.com/35" alt="">
-											<div class="data">
-												<p class="user">
-													<strong> <a href="/profile"> Nombre usuario: <%=
-																user[i].nombreUsuario %> </a>
-													</strong>
-													<%= comentarios[i].comentario %>
-												</p>
-											</div>
-										</article>
-										<% } %>
+										<!-- /product detail -->
 
-									</section>
-									<form class="form" action="" method="POST">
-										<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-										<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-									</form>
+										<!-- /product detail -->
 
-									<!-- /product detail -->
-
-									<!-- footer -->
-									<%- Include('./partials/footer') %>
-										<!-- /footer -->
+										<!-- footer -->
+										<%- include('./partials/footer') %>
+											<!-- /footer -->
