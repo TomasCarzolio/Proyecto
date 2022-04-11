@@ -35,22 +35,6 @@
 		<div class="row">
 			<%= for (let i=0; i < datos.productos.length; i++) { %>
 				<div class="col-12 col-sm-6 col-lg-3">
-<<<<<<< HEAD
-				<section class="product-box">
-					<a href="/:<%= datos.productos[i].id %> ">
-						<figure class="product-box_image">
-							<img src="/images/products/default-image.png" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2><%= datos.productos[i].artista %> - <%= datos.productos[i].lugar %> </h2>
-							<p> <%= datos.productos[i].fecha %> - <%= datos.productos[i].precio %> </p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>;
-			<%= } %> 
-=======
 					<section class="product-box">
 						<a href="/:<%= datos.productos[i].id %> ">
 							<figure class="product-box_image">
@@ -69,7 +53,6 @@
 					</section>
 				</div>;
 				<%= } %>
->>>>>>> c22c192e055d7e04021e0f15dc829e5c6d86ed31
 		</div>
 	</div>
 	<!-- /Mis productos -->
