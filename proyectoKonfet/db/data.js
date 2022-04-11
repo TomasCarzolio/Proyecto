@@ -99,6 +99,24 @@ let data = {
                 precio: "$3000",
                 descripcion : 'No te lo pierdas!!!',
                 foto: '/images/products/nicki.jpg'
+            },
+            {
+                id: 11,
+                artista: "Eladio Carrión",
+                lugar: "Estadio Luna Park",
+                fecha: 14 / 08 / 2022,
+                precio: "$4000",
+                descripcion : 'No te lo pierdas!!!',
+                foto: '/images/products/eladio.jpg'
+            },
+            {
+                id: 12,
+                artista: "Marc Seguí",
+                lugar: "Estadio Luna Park",
+                fecha: 02 / 09 / 2022,
+                precio: "$6000",
+                descripcion : 'No te lo pierdas!!!',
+                foto: '/images/products/marc.jpg'
             }
         ],
 
@@ -138,6 +156,14 @@ let data = {
         {
             nombreUsuario: 'Javier Ortega',
             comentario: 'Pesimo concierto!'
+        },
+        {
+            nombreUsuario: 'Lucas Perez',
+            comentario: 'Que contento que estoy! Muchas gracias por la entrega!'
+        },
+        {
+            nombreUsuario: 'Lucas Perez',
+            comentario: 'Que contento que estoy! Muchas gracias por la entrega!'
         },
         {
             nombreUsuario: 'Lucas Perez',
