@@ -11,13 +11,12 @@
 			</p>
 		</div>
 
-		<% for (let i=0; i < productos.length; i++) { %>
 			<div class="product-detail">
 				<div class="row">
 					<article class="col-12 col-lg-8 product-detail-info">
 						<img src="./images/products/default-image.png" alt="" class="product-detail-img">
 						<p class="product-detail-description">
-							<%= productos[i].descripcion %>
+							<%= productos.descripcion %>
 						</p>
 					</article>
 					<div class="col-12 col-lg-4">
@@ -28,7 +27,7 @@
 									<p class="user">
 										<strong> <a href="/profile"> Nombre usuario: <%= user.nombreUsuario %> </a>
 										</strong>
-										<%= comentarios[i].comentario %>
+										<%= comentarios.comentario %>
 									</p>
 								</div>
 							</article>
@@ -41,11 +40,10 @@
 												<strong> <a href="/profile"> Nombre usuario: <%= user.nombreUsuario %>
 													</a>
 												</strong>
-												<%= comentarios[i].comentario %>
+												<%= comentarios.comentario %>
 											</p>
 										</div>
 									</article>
-									<% } %>
 
 										<!-- /product detail -->
 
