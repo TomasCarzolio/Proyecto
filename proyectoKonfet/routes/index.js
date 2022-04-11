@@ -9,5 +9,6 @@ router.get('/login', indexController.login);
 
 router.get('/register', indexController.register);
 
+router.get('/searchResults', indexController.searchResults);
 
 module.exports = router;
