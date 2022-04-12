@@ -4,7 +4,7 @@ let data = {
         nombre: "Lisandro",
         apellido: "Perez",
         email: "lperez@gmail.com",
-        fechaDeNac: 02 / 02 / 1982,
+        fechaDeNac: 02/02/ 1982,
         dni: 44189323,
         fotoDePerfil: "/images/retrato.jpeg",
     },
@@ -15,7 +15,7 @@ let data = {
                 id: 1,
                 artista: "Daddy Yankee",
                 lugar: "Estadio Luna Park",
-                fecha: 03 / 04 / 2022,
+                fecha: (2022,03,04),
                 precio: "$2000",
                 descripcion : 'No te lo pierdas!!!',
                 foto: '/images/products/daddy.jpg'
