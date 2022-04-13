@@ -9,9 +9,10 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> 
+		<h2 class="col-12"> 
+			<form>
 				<div class="mb-3">
-					<label for="exampleFormControlInput1" class="form-label">Email</label>
+					<label for="exampleFormControlInput1" class="form-label">Mail</label>
 					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
 				  </div>
 				  <div class="mb-3">
@@ -19,7 +20,7 @@
 					<input type="text" class="form-control" id="name">
 				  </div>
 				  <div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Password</label>
+					<label for="exampleInputPassword1" class="form-label">Contraseña</label>
 					<input type="password" class="form-control" id="exampleInputPassword1">
 				  </div>
 				  <div class="mb-3">
@@ -33,11 +34,10 @@
 				  <div class="input-group mb-3">
 					<label class="input-group-text" for="inputGroupFile02">Foto de Perfil</label>
 					<input type="file" class="form-control" id="inputGroupFile02">
-				</div>
-
-				  
-			</h2>
-
+				</div> 
+				<button type="submit" class="btn btn-primary">Entregar</button>
+			</form> 
+		</h2>
 
 	<!-- footer -->
 	<%- include('./partials/footer') %>
