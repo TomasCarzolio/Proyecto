@@ -24,12 +24,12 @@
 				<div class="col-12 col-lg-4">
 					<section class="comments">
 						<article>
-							<img src="<%= user.fotoDePerfil %>" alt="">
+							<img src="/images/anonimo.jpg" alt="">
 							<div class="data">
 								<p class="user">
-									<strong> <a href="/users/profile"> Nombre usuario: <%= comentarios.nombreUsuario %> </a>
+									<strong> <a href="/users/profile"> <%= comentarios[0].nombreUsuario %> </a>
 									</strong>
-									<%= comentarios.comentario %>
+									<%= comentarios[0].comentario %>
 								</p>
 							</div>
 						</article>
