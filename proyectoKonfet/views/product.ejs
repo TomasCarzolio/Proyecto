@@ -5,50 +5,43 @@
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title">Nombre del producto</h2>
+			<h2 class="products-title">
+				<%= productos.artista %>
+			</h2>
 			<p class="product-detail-description">
-				<a href="/products/add"> Editar </a>
+				<a href="/products/add"> Editar Entrada</a>
 			</p>
 		</div>
 
-			<div class="product-detail">
-				<div class="row">
-					<article class="col-12 col-lg-8 product-detail-info">
-						<img src="/images/products/default-image.png" alt="" class="product-detail-img">
-						<p class="product-detail-description">
-							<%= productos.descripcion %>
-						</p>
-					</article>
-					<div class="col-12 col-lg-4">
-						<section class="comments">
-							<article>
-								<img src="https://via.placeholder.com/35" alt="">
-								<div class="data">
-									<p class="user">
-										<strong> <a href="/users/profile"> Nombre usuario: <%= user.nombreUsuario %> </a>
-										</strong>
-										<%= comentarios.comentario %>
-									</p>
-								</div>
-							</article>
-							<div class="col-12 col-lg-4">
-								<section class="comments">
-									<article>
-										<img src="https://via.placeholder.com/35" alt="">
-										<div class="data">
-											<p class="user">
-												<strong> <a href="/users/profile"> Nombre usuario: <%= user.nombreUsuario %>
-													</a>
-												</strong>
-												<%= comentarios.comentario %>
-											</p>
-										</div>
-									</article>
+		<div class="product-detail">
+			<div class="row">
+				<article class="col-12 col-lg-8 product-detail-info">
+					<img src="<%= productos.foto %>" alt="" class="product-detail-img">
+					<p class="product-detail-description">
+						<%= productos.descripcion %>
+					</p>
+				</article>
+				<div class="col-12 col-lg-4">
+					<section class="comments">
+						<article>
+							<img src="<%= user.fotoDePerfil %>" alt="">
+							<div class="data">
+								<p class="user">
+									<strong> <a href="/users/profile"> Nombre usuario: <%= comentarios.nombreUsuario %> </a>
+									</strong>
+									<%= comentarios.comentario %>
+								</p>
+							</div>
+						</article>
+					</section>
+				</div>
+			</div>
+		</div>
 
-										<!-- /product detail -->
+		<!-- /product detail -->
 
-										<!-- /product detail -->
+		<!-- /product detail -->
 
-										<!-- footer -->
-										<%- include('./partials/footer') %>
-											<!-- /footer -->
+		<!-- footer -->
+		<%- include('./partials/footer') %>
+			<!-- /footer -->
