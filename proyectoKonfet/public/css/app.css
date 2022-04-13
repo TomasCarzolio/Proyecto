@@ -477,6 +477,12 @@ textarea.form-input {
 }
 
 
+.logo{
+  border-radius: 200px;
+
+}
+
+
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
   .main-header_credit-link {
