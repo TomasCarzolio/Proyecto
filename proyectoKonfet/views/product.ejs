@@ -23,16 +23,18 @@
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
-						<article>
-							<img src="/images/anonimo.jpg" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/users/profile"> <%= comentarios[0].nombreUsuario %> </a>
-									</strong>
-									<%= comentarios[0].comentario %>
-								</p>
-							</div>
-						</article>
+						<% for(let i = 0; i < comentarios.length; i++) { %> 
+							<article>
+								<img src="/images/anonimo.jpg" alt="">
+								<div class="data">
+									<p class="user">
+										<strong> <a href="/users/profile"> <%= comentarios[i].nombreUsuario %> </a>
+										</strong>
+										<%= comentarios[i].comentario %>
+									</p>
+								</div>
+							</article>
+						<% } %>
 					</section>
 					<form class="form" action="" method="POST">
 						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
