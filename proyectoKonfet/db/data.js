@@ -18,7 +18,7 @@ let data = {
                 fecha: "2022-03-04",
                 precio: "$2000",
                 descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/daddy.jpg',
+                foto: '/images/products/yankee.jpg',
                 entrada :'/images/products/entrada-daddy.jpg'
             },
             {
@@ -48,7 +48,7 @@ let data = {
                 fecha: "2022-08-10",
                 precio: "$1000",
                 descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/nickyjam.jpg',
+                foto: '/images/products/nickyj.jpg',
                 entrada :'/images/products/entrada-nicky.jpg'
             },
             {
@@ -58,7 +58,7 @@ let data = {
                 fecha: "2022-01-12",
                 precio: "$500",
                 descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/becerra.jpg',
+                foto: '/images/products/mariabecerra.jpg',
                 entrada :'/images/products/entrada-maria.jpg'
             },
             {
@@ -78,7 +78,7 @@ let data = {
                 fecha: "2024-08-07",
                 precio: "$3000",
                 descripcion: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/emimernes.jpg',
+                foto: '/images/products/emiliamernes.jpg',
                 entrada :'/images/products/entrada-emilia.jpg'
             },
             {
@@ -98,7 +98,7 @@ let data = {
                 fecha: "2023-07-02",
                 precio: "$2000",
                 descripcion: "TOUR 2023. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/killah.jpg',
+                foto: '/images/products/litkillah.jpg',
                 entrada :'/images/products/entrada-lit.jpg'
             },
             {
