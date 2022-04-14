@@ -18,7 +18,7 @@ let data = {
                 fecha: "2022-03-04",
                 precio: "$2000",
                 descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/daddy.jpg'
+                foto: '/images/products/yankee.jpg'
             },
             {
                 id: 2,
@@ -36,7 +36,8 @@ let data = {
                 fecha: "2022-05-08",
                 precio: "$2000",
                 descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/mars.jpg'
+                foto: '/images/products/mars.jpg',
+                entrada: '/images/products/entrada-bruno.jpg'
             },
             {
                 id: 4,
@@ -45,7 +46,7 @@ let data = {
                 fecha: "2022-08-10",
                 precio: "$1000",
                 descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/nickyjam.jpg'
+                foto: '/images/products/nickyj.jpg'
             },
             {
                 id: 5,
@@ -54,7 +55,7 @@ let data = {
                 fecha: "2022-01-12",
                 precio: "$500",
                 descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/becerra.jpg'
+                foto: '/images/products/mariabecerra.jpg'
             },
             {
                 id: 6,
@@ -72,7 +73,7 @@ let data = {
                 fecha: "2024-08-07",
                 precio: "$3000",
                 descripcion: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/emimernes.jpg'
+                foto: '/images/products/emiliamernes.jpg'
             },
             {
                 id: 8,
@@ -81,7 +82,8 @@ let data = {
                 fecha: "2022-06-04",
                 precio: "$5000",
                 descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/tiago.jpg'
+                foto: '/images/products/tiago.jpg',
+                entrada: '/images/products/entrada-tiago.jpg'
             },
             {
                 id: 9,
@@ -90,7 +92,7 @@ let data = {
                 fecha: "2023-07-02",
                 precio: "$2000",
                 descripcion: "TOUR 2023. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/killah.jpg'
+                foto: '/images/products/litkillah.jpg'
             },
             {
                 id: 10,
@@ -99,7 +101,8 @@ let data = {
                 fecha: "2022-08-12",
                 precio: "$3000",
                 descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/nicki.jpg'
+                foto: '/images/products/nicki.jpg',
+                entrada: '/images/products/entrada-nicki.jpg'
             },
             {
                 id: 11,
@@ -108,7 +111,8 @@ let data = {
                 fecha: "2024-04-10",
                 precio: "$4000",
                 descripcion: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
-                foto: '/images/products/eladio.jpg'
+                foto: '/images/products/eladio.jpg',
+                entrada: '/images/products/entrada-carrion.jpg'
             },
             {
                 id: 12,

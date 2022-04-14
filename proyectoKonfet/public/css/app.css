@@ -482,6 +482,12 @@ textarea.form-input {
 
 }
 
+.size-photo{
+  width: 260px;
+  height: 250px;
+  
+}
+
 
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
@@ -532,5 +538,16 @@ textarea.form-input {
   .footer-data {
     width: 95%;
     margin: auto;
+  }
+
+  .logo{
+    border-radius: 200px;
+  
+  }
+
+  .size-photo{
+    width: 260px;
+    height: 250px;
+    
   }
 }
