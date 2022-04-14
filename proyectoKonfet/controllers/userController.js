@@ -1,6 +1,6 @@
 const data = require("../db/data");
 
-const userController = {
+const controller = {
     profile: function(req, res){
         res.render('profile', { 
             user: data.usuario,
@@ -15,4 +15,4 @@ const userController = {
    
 }
 
-module.exports = (userController);
+module.exports = controller;

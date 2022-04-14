@@ -1,7 +1,7 @@
 const { usuario } = require('../db/data');
 const data = require('../db/data')
 
-const productController = {
+const controller = {
     product : function (req, res) {
         console.log(data.productos)
         res.render('product', {
@@ -16,4 +16,4 @@ const productController = {
     
 }
 
-module.exports = productController;
+module.exports = controller;

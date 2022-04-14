@@ -1,6 +1,6 @@
 const data = require('../db/data')
 
-const indexController = {
+const controller = {
     index: function (req, res) {
         res.render('index',
             {
@@ -20,4 +20,4 @@ const indexController = {
 
 }
 
-module.exports = indexController;
+module.exports = controller;

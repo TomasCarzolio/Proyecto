@@ -305,7 +305,8 @@ hr {
 }
 
 .product-detail-img {
-  width: 70%;
+  width: 700px;
+  height: 700px;
   display: block;
   margin: auto;
 }
