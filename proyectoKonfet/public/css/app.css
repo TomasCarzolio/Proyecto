@@ -1,5 +1,5 @@
 /*====== Fonts ======*/
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Josefin+Sans&family=Kanit:wght@300&display=swap');
 
 
 /*====== Variables ======*/
@@ -10,7 +10,7 @@
   --gray: #666666;
   --light-gray: #ebebeb;
   --green: #39b54a;
-  --base-font-family: 'Roboto', sans-serif
+  --base-font-family: 'Kanit', sans-serif;
 }
 
 
@@ -27,10 +27,21 @@ body {
 }
 
 body {
-  font-family: var(--base-font-family);
+  font-family: 'Kanit', sans-serif;
   font-weight: 300;
   background-color: var(--light-gray);
 }
+
+header, footer{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+}
+
+h2.products-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 5em;
+}
+
 
 ul,
 ol {
@@ -129,9 +140,11 @@ hr {
   color: white;
 }
 
+
+
 .left-navbar,
 .right-navbar {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .logout{
@@ -149,7 +162,7 @@ hr {
 .left-navbar a,
 .right-navbar a {
   display: block;
-  padding: 5px 0;
+  padding: 10px ;
   border-bottom: solid 1px var(--gray);
 }
 
@@ -514,9 +527,12 @@ textarea.form-input {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
+  .right-navbar {
+    justify-content: space-around;
+  }
   .left-navbar a,
   .right-navbar a {
     border-bottom: none;

@@ -17,7 +17,8 @@ let data = {
                 lugar: "Estadio atanasio girardot",
                 fecha: "2022-04-05",
                 precio: "$2000",
-                descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2022.",
+                descripcion2: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/yankee.jpg',
                 entrada :'/images/products/entrada-daddy.jpg'
             },
@@ -27,7 +28,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: "2024-05-14",
                 precio: "$3000",
-                descripcion: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2024.",
+                descripcion2: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/badbunny.jpg',
                 entrada :'/images/products/entrada-badbunny.jpg'
             },
@@ -37,7 +39,8 @@ let data = {
                 lugar: "Park MGM",
                 fecha: "2022-12-17",
                 precio: "$2000",
-                descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2022.",
+                descripcion2: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/mars.jpg',
                 entrada: '/images/products/entrada-bruno.jpg'
             },
@@ -47,7 +50,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: "2022-06-30",
                 precio: "$1000",
-                descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2022.",
+                descripcion2: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/nickyj.jpg',
                 entrada :'/images/products/entrada-nicky.jpg'
             },
@@ -57,7 +61,8 @@ let data = {
                 lugar: "Palacio vistalegre",
                 fecha: "2022-10-09",
                 precio: "$500",
-                descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2022.",
+                descripcion2: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/mariabecerra.jpg',
                 entrada :'/images/products/entrada-maria.jpg'
             },
@@ -67,7 +72,8 @@ let data = {
                 lugar: "Estadio Luna Park",
                 fecha: "2023-03-04",
                 precio: "$2500",
-                descripcion: "TOUR 2023. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2023.",
+                descripcion2: "TOUR 2023. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/duki.jpg',
                 entrada :'/images/products/entrada-duki.jpg'
             },
@@ -77,7 +83,8 @@ let data = {
                 lugar: "Autódromo de rafaela",
                 fecha: "2024-03-23",
                 precio: "$3000",
-                descripcion: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2024.",
+                descripcion2: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/emiliamernes.jpg',
                 entrada :'/images/products/entrada-emilia.jpg'
             },
@@ -87,7 +94,8 @@ let data = {
                 lugar: "Lunario",
                 fecha: "2022-05-03",
                 precio: "$5000",
-                descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2024.",
+                descripcion2: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/tiago.jpg',
                 entrada: '/images/products/entrada-tiago.jpg'
             },
@@ -97,7 +105,8 @@ let data = {
                 lugar: "Pinamar park",
                 fecha: "2023-01-22",
                 precio: "$2000",
-                descripcion: "TOUR 2023. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2023.",
+                descripcion2: "TOUR 2023. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/litkillah.jpg',
                 entrada :'/images/products/entrada-lit.jpg'
             },
@@ -107,7 +116,8 @@ let data = {
                 lugar: "Estadio madrid",
                 fecha: "2022-02-24",
                 precio: "$3000",
-                descripcion: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2022.",
+                descripcion2: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/nicki.jpg',
                 entrada: '/images/products/entrada-nicki.jpg'
             },
@@ -117,7 +127,8 @@ let data = {
                 lugar: "Coliseo de puerto rico",
                 fecha: "2024-08-20",
                 precio: "$4000",
-                descripcion: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2024.",
+                descripcion2: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/eladio.jpg',
                 entrada: '/images/products/entrada-carrion.jpg'
             },
@@ -127,7 +138,8 @@ let data = {
                 lugar: "Burgosonora",
                 fecha: "2023-04-09",
                 precio: "$6000",
-                descripcion: "TOUR 2023. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
+                descripcion1: "TOUR 2023.",
+                descripcion2: "TOUR 2023. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/marc.jpg',
                 entrada :'/images/products/entrada-marc.jpg'
             }
