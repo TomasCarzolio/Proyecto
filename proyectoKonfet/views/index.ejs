@@ -1,7 +1,7 @@
-	<!-- Header -->
-	<%- include('./partials/header') %>
+<!-- Header -->
+<%- include('./partials/header') %>
 	<!-- /Header -->
-	
+
 	<!-- Banner -->
 	<div class="banner">
 		<img src="/images/bannerConcierto" alt="Banner">
@@ -15,7 +15,7 @@
 				<h2 class="products-title">Novedades</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<% for(let i = 0; i < productos.length; i++) { %> 
+			<% for(let i=0; i < productos.length; i++) { %>
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
 						<a href="/products/<%= productos[i].id - 1 %> ">
@@ -23,9 +23,14 @@
 								<img class="size-photo" src="<%= productos[i].foto %>" alt="">
 							</figure>
 							<article class="product-box_data">
-								<h2> <%= productos[i].artista %> </h2>
-								<p> <%= productos[i].descripcion1 %> </p>
-								<p> Comentarios: <%= comentarios.length %> </p>
+								<h2>
+									<%= productos[i].artista %>
+								</h2>
+								<p>
+									<%= productos[i].descripcion1 %>
+								</p>
+								<p> Comentarios: <%= comentarios.length %>
+								</p>
 							</article>
 						</a>
 					</section>
@@ -38,4 +43,4 @@
 
 	<!-- footer -->
 	<%- include('./partials/footer') %>
-	<!-- /footer -->
+		<!-- /footer -->
