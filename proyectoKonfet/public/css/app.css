@@ -220,6 +220,7 @@ hr {
   display: flex;
   justify-content: center;
   justify-self: center;
+  text-align: center;
 }
 
 .product-box_data span {
@@ -489,7 +490,9 @@ textarea.form-input {
 }
 
 .foto-perfil{
-  border-radius: 50%;
+  border-radius: 100%;
+  height: 75%;
+  width: 100%;
 }
 
 .main-title{
@@ -515,6 +518,7 @@ textarea.form-input {
   height: 250px;
   
 }
+
 
 
 /*====== Media-Queries ======*/

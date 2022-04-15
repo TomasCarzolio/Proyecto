@@ -14,7 +14,7 @@ let data = {
             {
                 id: 1,
                 artista: "Daddy Yankee",
-                lugar: "Estadio atanasio girardot",
+                lugar: "Estadio Atanasio Girardot",
                 fecha: "2022/04/05",
                 precio: "$2000",
                 descripcion1: "TOUR 2022.",
@@ -58,7 +58,7 @@ let data = {
             {
                 id: 5,
                 artista: "Maria Becerra",
-                lugar: "Palacio vistalegre",
+                lugar: "Palacio Vistalegre",
                 fecha: "2022/10/09",
                 precio: "$500",
                 descripcion1: "TOUR 2022.",
@@ -80,7 +80,7 @@ let data = {
             {
                 id: 7,
                 artista: "Emilia Mernes",
-                lugar: "Autódromo de rafaela",
+                lugar: "Autódromo de Rafaela",
                 fecha: "2024/03/23",
                 precio: "$3000",
                 descripcion1: "TOUR 2024.",
@@ -102,7 +102,7 @@ let data = {
             {
                 id: 9,
                 artista: "Lit Killah",
-                lugar: "Pinamar park",
+                lugar: "Pinamar Park",
                 fecha: "2023/01/22",
                 precio: "$2000",
                 descripcion1: "TOUR 2023.",
@@ -124,7 +124,7 @@ let data = {
             {
                 id: 11,
                 artista: "Eladio Carrión",
-                lugar: "Coliseo de puerto rico",
+                lugar: "Coliseo de Puerto Rico",
                 fecha: "2024/08/20",
                 precio: "$4000",
                 descripcion1: "TOUR 2024.",
