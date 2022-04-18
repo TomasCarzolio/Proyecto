@@ -152,7 +152,7 @@ let data = {
         },
         {
             nombreUsuario: 'Chiara Salvucci',
-            comentario: 'Me pareció un mal concierto concierto! El artista no fue lo que esperaba. Igualmente, la página ha sido muy eficaz a la hora de comprar. Muchas gracias!'
+            comentario: 'Me pareció un mal concierto! El artista no fue lo que esperaba. Igualmente, la página ha sido muy eficaz a la hora de comprar. Muchas gracias!'
         },
         {
             nombreUsuario: 'Nicolás Cucher',
@@ -160,7 +160,7 @@ let data = {
         },
         {
             nombreUsuario: 'Carolina Sierras',
-            comentario: 'Me pareció un buen concierto concierto!'
+            comentario: 'Me pareció un buen concierto!'
         },
         {
             nombreUsuario: 'Lucas Demiral',
@@ -187,11 +187,11 @@ let data = {
             comentario: 'Que contento que estoy! Muchas gracias por la entrega!'
         },
         {
-            nombreUsuario: 'Lucas Perez',
+            nombreUsuario: 'Hernesto Perez',
             comentario: 'Que contento que estoy! Muchas gracias por la entrega!'
         },
         {
-            nombreUsuario: 'Lucas Perez',
+            nombreUsuario: 'Juan Perez',
             comentario: 'Que contento que estoy! Muchas gracias por la entrega!'
         }
     ]
