@@ -20,7 +20,7 @@ let data = {
                 descripcion1: "TOUR 2022.",
                 descripcion2: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/yankee.jpg',
-                entrada :'/images/products/entrada-daddy.jpg'
+                entrada: '/images/products/entrada-daddy.jpg'
             },
             {
                 id: 2,
@@ -31,7 +31,7 @@ let data = {
                 descripcion1: "TOUR 2024.",
                 descripcion2: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/badbunny.jpg',
-                entrada :'/images/products/entrada-badbunny.jpg'
+                entrada: '/images/products/entrada-badbunny.jpg'
             },
             {
                 id: 3,
@@ -53,7 +53,7 @@ let data = {
                 descripcion1: "TOUR 2022.",
                 descripcion2: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/nickyj.jpg',
-                entrada :'/images/products/entrada-nicky.jpg'
+                entrada: '/images/products/entrada-nicky.jpg'
             },
             {
                 id: 5,
@@ -64,7 +64,7 @@ let data = {
                 descripcion1: "TOUR 2022.",
                 descripcion2: "TOUR 2022. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/mariabecerra.jpg',
-                entrada :'/images/products/entrada-maria.jpg'
+                entrada: '/images/products/entrada-maria.jpg'
             },
             {
                 id: 6,
@@ -75,7 +75,7 @@ let data = {
                 descripcion1: "TOUR 2023.",
                 descripcion2: "TOUR 2023. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/duki.jpg',
-                entrada :'/images/products/entrada-duki.jpg'
+                entrada: '/images/products/entrada-duki.jpg'
             },
             {
                 id: 7,
@@ -86,7 +86,7 @@ let data = {
                 descripcion1: "TOUR 2024.",
                 descripcion2: "TOUR 2024. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/emiliamernes.jpg',
-                entrada :'/images/products/entrada-emilia.jpg'
+                entrada: '/images/products/entrada-emilia.jpg'
             },
             {
                 id: 8,
@@ -108,7 +108,7 @@ let data = {
                 descripcion1: "TOUR 2023.",
                 descripcion2: "TOUR 2023. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/litkillah.jpg',
-                entrada :'/images/products/entrada-lit.jpg'
+                entrada: '/images/products/entrada-lit.jpg'
             },
             {
                 id: 10,
@@ -141,7 +141,7 @@ let data = {
                 descripcion1: "TOUR 2023.",
                 descripcion2: "TOUR 2023. Luego de más de dos años de espera, y por entradas agotadas en todas sus funciones, habrá otra función. No te lo podes perder, ya que viviremos un concierto que promete ser histórico: el ansiado reencuentro!!",
                 foto: '/images/products/marc.jpg',
-                entrada :'/images/products/entrada-marc.jpg'
+                entrada: '/images/products/entrada-marc.jpg'
             }
         ],
 

@@ -23,18 +23,20 @@
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
-						<% for(let i = 0; i < comentarios.length; i++) { %> 
+						<% for(let i=0; i < comentarios.length; i++) { %>
 							<article>
 								<img src="/images/anonimo.jpg" alt="">
 								<div class="data">
 									<p class="user">
-										<strong> <a href="/users/profile"> <%= comentarios[i].nombreUsuario %> </a>
+										<strong> <a href="/users/profile">
+												<%= comentarios[i].nombreUsuario %>
+											</a>
 										</strong>
 										<%= comentarios[i].comentario %>
 									</p>
 								</div>
 							</article>
-						<% } %>
+							<% } %>
 					</section>
 					<form class="form" action="/products/<%= productos.id - 1 %>" method="GET">
 						<input class="form-input" type="text" value="" placeholder="Agregar comentario">

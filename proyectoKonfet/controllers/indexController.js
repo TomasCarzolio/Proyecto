@@ -6,7 +6,6 @@ const controller = {
             {
                 productos: data.productos,
                 comentarios: data.comentarios,
-                usuario: data.usuario
             })
     },
     register: function (req, res) {
@@ -15,8 +14,9 @@ const controller = {
     login: function (req, res) {
         res.render('login')
     },
-    searchResults : function (req, res) {
-        res.render('search-results')}
+    searchResults: function (req, res) {
+        res.render('search-results')
+    }
 
 }
 
