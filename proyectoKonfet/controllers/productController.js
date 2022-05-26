@@ -1,17 +1,29 @@
-const data = require('../db/data')
+const data = require('../database/models')
+const comentario = data.Producto;
+const comentario = data.Comentario;
 
 const controller = {
     product: function (req, res) {
-        res.render('product', 
-        {
-            comentarios: data.comentarios,
-            productos: data.productos[req.params.product],
-        })
+        productos.findAll()
+        .then(function(productos){
+        comentarios.findAll()
+        .then(function(comentarios){
+            res.render('product', {productos: productos,comentarios: comentarios})
+        });
+   })
+
+   .catch(function(error){
+       res.send(error)
+   })
     },
     productAdd: function (req, res) {
-        res.render('product-add')
+        this.product.findByPk()
+        .then(function(product){
+        res.render('product-add', product)    
+        });  
     }
-
-}
+    .catch(function(error){
+        res.send(error)
+})};
 
 module.exports = controller;
