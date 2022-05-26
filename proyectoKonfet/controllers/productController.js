@@ -27,3 +27,14 @@ const controller = {
 })};
 
 module.exports = controller;
+
+// index: function (req, res) {
+//     producto.findAll()
+//         .then(function(productos){
+//             res.render("index", {productos : productos, })
+//         });
+//         comentarios.findAll()
+//         .then(function(comentarios){
+//             res.render("index", {comentarios : comentarios})
+//         }
+//         )},
