@@ -22,7 +22,10 @@ const controller = {
         .then(function(usuario){
         res.render('profile-edit', usuario)
         })
-      }        
+      }  .catch(function (error) {
+        res.send(error);
+    })  
+        
     }
     ;
 
