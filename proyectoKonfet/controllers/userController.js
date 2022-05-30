@@ -22,10 +22,20 @@ const controller = {
         .then(function(usuario){
         res.render('profile-edit', usuario)
         })
-      }  .catch(function (error) {
-        res.send(error);
-    })  
-        
+        .catch(function (error) {
+            res.send(error);
+    })},
+    
+    profileUpdate: function(req, res) {
+            if (req.file) req.body.fotoDePerfil = (req.file.path).replace('public', '');
+            data.usuario.update(req.body, { where: { usuario_id: req.params.id } })
+                .then(function(usuario) {
+                    res.redirect('/')
+                })
+                .catch(function(error) {
+                    res.send(error);
+                })
+        },
     }
     ;
 
