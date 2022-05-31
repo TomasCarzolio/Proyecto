@@ -15,15 +15,30 @@ const controller = {
    .catch(function(error){
        res.send(error)
    })
+
     },
+
     productAdd: function (req, res) {
         this.product.findByPk()
         .then(function(product){
         res.render('product-add', product)    
         }) 
+
     .catch(function(error){
         res.send(error)
-        })
+    })
+},
+
+    store: function(req, res) {
+        req.body.usuario_id = req.session.usuario.id;
+        if (req.file) req.body.cover = (req.file.path).replace('public', '');
+        data.productos.create(req.body)
+            .then(function() {
+                res.redirect('/')
+            })
+            .catch(function(error) {
+                res.send(error);
+            })
     }};
 
 module.exports = controller;
