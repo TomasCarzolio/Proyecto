@@ -10,24 +10,24 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 			<h2 class="col-12">
-				<form>
+				<form method="POST" enctype="multipart/form-data">
 					<div class="mb-3">
-						<label class="input-group-text" for="inputGroupFile02">Imagen</label>
-						<input type="file" class="form-control" id="inputGroupFile02">
+						<label class="input-group-text" for="inputGroupFile02"></label>
+						<input name="foto" type="file" class="form-control" id="inputGroupFile02" value="<%= productos.foto %>">
 					</div>
 					<div class="mb-3">
-						<label for="content" class="form-label">Nombre del producto</label>
-						<input type="text" class="form-control" id="content">
+						<label for="content" class="form-label"></label>
+						<input name="artista" type="text" class="form-control" id="content" value="<%= productos.artista %>">
 					</div>
 					<div class="mb-3">
-						<label for="content" class="form-label">Descripcion</label>
-						<input type="text" class="form-control" id="content">
+						<label for="content" class="form-label"></label>
+						<input name="descripcion" type="text" class="form-control" id="content" value="<%= productos.descripcion %>">
 					</div>
 					<div class="mb-3">
-						<label for="fecha" class="form-label">Fecha de carga</label>
-						<input type="date" class="form-control" id="fecha">
+						<label for="fecha" class="form-label"></label>
+						<input name="fecha" type="date" class="form-control" id="fecha" value="<%= productos.fecha %>">
 					</div>
-					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="submit" class="btn btn-primary">Entregar</button>
 				</form>
 			</h2>
 

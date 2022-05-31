@@ -6,6 +6,8 @@ var logger = require('morgan');
 var session = require('express-session');
 var data = require('./database/models')
 
+// db.sequelize.sync({force: true});
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products')
