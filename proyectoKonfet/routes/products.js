@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/productController')
-var multer = require('multer');
-const upload = multer({ dest: 'public/images/uploads' });
+const multer = require('multer');
+const path = require('path')
+const upload = multer({ dest: path.join(__dirname,'../public/images/uploads') });
 
 router.get('/add', controller.productAdd);
 router.post('/add', upload.single('cover'), controller.store);
