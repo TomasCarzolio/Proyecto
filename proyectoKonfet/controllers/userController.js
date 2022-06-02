@@ -34,7 +34,7 @@ const controller = {
                 })
                 .catch(function(error) {
                     res.send(error);
-                })
+                  })
         },
     }
     ;
