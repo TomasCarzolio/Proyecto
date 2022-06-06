@@ -7,7 +7,7 @@ module.exports = function (sequelize, dataTypes) {
         },
         creado : { type: dataTypes.DATE },
         contenido: { type: dataTypes.STRING },
-       usuario_id: { type: dataTypes.INTEGER },
+        usuario_id: { type: dataTypes.INTEGER },
         producto_id: { type: dataTypes.INTEGER  }
 
 
