@@ -27,13 +27,10 @@ const controller = {
     },
 
     store: function (req, res) {
+        console.log(req.body);
         //if (!req.body.email) { throw Error('No se proporciona correo electrónico.') }
-        const hashedContrasenia = hasher.hashSync(req.body.contrasenia, 10);
-        usuario.create({
-            nombreUsuario: req.body.nombreUsuario,
-            contrasenia: hashedContrasenia,
-            email: req.body.email,
-        })
+        req.body.contrasenia = hasher.hashSync(req.body.contrasenia, 10);
+        usuario.create(req.body)
             .then(function () {
                 res.redirect('/');
             })
