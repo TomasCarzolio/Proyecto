@@ -6,10 +6,8 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.INTEGER
         },
         nombreUsuario: { type: dataTypes.STRING(100) },
-        nombre: { type: dataTypes.STRING },
         email: { type: dataTypes.STRING },
         fotoDePerfil: { type: dataTypes.STRING },
-        fechaDeNac: { type: dataTypes.DATE },
         dni: { type: dataTypes.INTEGER },
         contrasenia : { type : dataTypes.STRING}
     }
