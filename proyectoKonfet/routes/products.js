@@ -8,7 +8,7 @@ const upload = multer({ dest: path.join(__dirname,'../public/images/uploads') })
 router.get('/add', controller.productAdd);
 router.post('/add', upload.single('fotoDePerfil'), controller.store);
 
-router.get('/:product', controller.product);
+router.get('/:producto', controller.product);
 
 
 module.exports = router;

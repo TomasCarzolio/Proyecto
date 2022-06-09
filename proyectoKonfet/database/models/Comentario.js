@@ -7,7 +7,7 @@ module.exports = function (sequelize, dataTypes) {
         },
         creado : { type: dataTypes.DATE },
         contenido: { type: dataTypes.STRING },
-       usuario_id: { type: dataTypes.INTEGER },
+        usuario_id: { type: dataTypes.INTEGER },
         producto_id: { type: dataTypes.INTEGER  }
 
 
@@ -18,5 +18,17 @@ module.exports = function (sequelize, dataTypes) {
         timestamps: false
     }
     const Comentario = sequelize.define('Comentario', cols, configs);
+
+    Comentario.associate = function(modelos) {
+        Comentario.belongsTo(modelos.Usuario, {
+            as: "usuario",
+            foreignkey: "usuario_id"
+        });
+        Comentario.belongsTo(modelos.Producto, {
+            as: "producto",
+            foreignkey: "producto_id"
+        })
+    }
+
     return Comentario;
 }

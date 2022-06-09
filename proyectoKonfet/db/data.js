@@ -1,10 +1,8 @@
 let data = {
     usuario: {
         nombreUsuario: "perezlisandro",
-        nombre: "Lisandro",
         apellido: "Perez",
         email: "lperez@gmail.com",
-        fechaDeNac: "1982-02-03",
         dni: 44189323,
         fotoDePerfil: "/images/retrato.jpeg",
     },
