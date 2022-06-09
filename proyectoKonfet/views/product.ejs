@@ -6,7 +6,7 @@
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
 			<h2 class="products-title"> Concierto
-				<%= productos.artista %>
+				<%= producto.artista %>
 			</h2>
 			<p class="product-detail-description">
 				<a href="/products/add"> Editar </a>
@@ -16,9 +16,9 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= productos.entrada %>" alt="" class="product-detail-img">
+					<img src="<%= producto.entrada %>" alt="" class="product-detail-img">
 					<p class="product-detail-description">
-						<%= productos.descripcion2 %>
+						<%= producto.descripcion %>
 					</p>
 				</article>
 				<div class="col-12 col-lg-4">
@@ -38,7 +38,7 @@
 							</article>
 							<% } %>
 					</section>
-					<form class="form" action="/products/<%= productos.id - 1 %>" method="GET">
+					<form class="form" action="/products/<%= producto.id - 1 %>" method="GET">
 						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>

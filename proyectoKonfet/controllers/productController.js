@@ -1,17 +1,16 @@
 const data = require('../database/models')
-const productos = data.Producto;
-const comentarios = data.Comentario;
+const producto = data.Producto;
+const comentario = data.Comentario;
 
 const controller = {
     product: function (req, res) {
-        productos.findAll()
-        .then(function(productos){
-        comentarios.findAll()
+        producto.findByPk(req.params.producto)
+        .then(function(producto){
+        comentario.findAll ({where: {producto_id: req.params.producto}})
         .then(function(comentarios){
-            res.render('product', {productos: productos,comentarios: comentarios})
+            res.render('product', {producto, comentarios})
         });
    })
-
    .catch(function(error){
        res.send(error)
    })

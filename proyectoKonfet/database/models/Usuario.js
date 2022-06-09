@@ -11,10 +11,20 @@ module.exports = function (sequelize, dataTypes) {
         dni: { type: dataTypes.INTEGER },
         contrasenia : { type : dataTypes.STRING}
     }
+
+
     const configs = {
         tableName: 'usuarios',
         timestamps: false
     }
+
     const Usuario = sequelize.define('Usuario', cols, configs);
+    
+    Usuario.associate = function(modelos){
+        Usuario.hasMany( modelos.Producto , {
+            as: "productos",
+            foreignKey: "producto_id",
+        });
+    };
     return Usuario;
 }
