@@ -8,6 +8,7 @@ module.exports = function (sequelize, dataTypes) {
         creado : { type: dataTypes.DATE },
         actualizado : { type: dataTypes.DATE },
         artista: { type: dataTypes.STRING(100) },
+        lugar: { type: dataTypes.STRING },
         fecha : { type: dataTypes.DATE },
         precio: { type: dataTypes.INTEGER },
         descripcion: { type: dataTypes.STRING(500) },

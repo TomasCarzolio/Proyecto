@@ -3,6 +3,7 @@ const producto = data.Producto;
 const comentario = data.Comentario;
 const usuario = data.Usuario;
 const hasher = require('bcryptjs')
+const op = data.Sequelize.Op;
 
 
 const controller = {
@@ -68,10 +69,23 @@ const controller = {
         res.redirect('/')
     },
 
-    searchResults: function (req, res) {
-        res.render('search-results')
+    searchResults: function(req, res) {
+        producto.findAll({ 
+            where: {
+                [op.or]: [
+                    { artista: { [op.like]: "%"+req.query.search+"%"} },
+                    { lugar: { [op.like]: "%"+req.query.search+"%"} },
+                    { fecha: { [op.like]: "%"+req.query.search+"%"} }
+                ]
+            },
+            include: [ { association: 'usuario' } ] 
+        }).then(function (productos) {
+                res.render('search-results', { productos });
+            })
+            .catch(function (error) {
+                res.send(error)
+            });
     }
-
 }
 
 module.exports = controller;
