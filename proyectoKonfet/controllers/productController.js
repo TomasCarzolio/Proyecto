@@ -18,14 +18,11 @@ const controller = {
     },
 
     productAdd: function (req, res) {
-        producto.findByPk()
-        .then(function(productos){
-            res.render('product-add', productos)    
-        }) 
-
-    .catch(function(error){
-        res.send(error)
-    })
+        if (!req.session.user) { 
+            alert("Inicia sesión para agregar productos.")
+            res.render('login');
+        } 
+        res.render('product-add');
 },
 
 store: function(req, res) {
