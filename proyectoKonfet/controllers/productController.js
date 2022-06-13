@@ -18,9 +18,9 @@ const controller = {
     },
 
     productAdd: function (req, res) {
-        this.product.findByPk()
-        .then(function(product){
-        res.render('product-add', product)    
+        producto.findByPk()
+        .then(function(productos){
+            res.render('product-add', productos)    
         }) 
 
     .catch(function(error){
@@ -28,16 +28,37 @@ const controller = {
     })
 },
 
-    store: function(req, res) {
-        req.body.usuario_id = req.session.usuario.id;
-        if (req.file) req.body.cover = (req.file.path).replace('public', '');
-        data.productos.create(req.body)
-            .then(function() {
-                res.redirect('/')
-            })
-            .catch(function(error) {
-                res.send(error);
-            })
-    }};
+store: function(req, res) {
+    req.body.usuario_id = req.session.usuario.id;
+    if (req.file) req.body.cover = (req.file.path).replace('public', '');
+    data.productos.create(req.body)
+        .then(function() {
+            res.redirect('/')
+        })
+        .catch(function(error) {
+            res.send(error);
+        })
+},
+
+    edit: function(req, res) {
+    producto.findByPk(req.params.id)
+        .then(function (producto) {
+            res.render('product-edit', { producto });
+        })
+        .catch(function (error) {
+            res.send(error);
+        })
+},
+
+    update: function(req, res) {
+    if (req.file) req.body.foto = (req.file.path).replace('public', '');
+    producto.update(req.body, { where: { id: req.params.id } })
+        .then(function() {
+            res.redirect('/')
+        })
+        .catch(function(error) {
+            res.send(error);
+        })
+}};
 
 module.exports = controller;
