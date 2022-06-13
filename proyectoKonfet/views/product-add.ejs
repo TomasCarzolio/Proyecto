@@ -12,24 +12,20 @@
 			<h2 class="col-12">
 				<form method="POST" enctype="multipart/form-data">
 					<div class="mb-3">
-						<label class="input-group-text" for="foto"></label>
-						<input name="foto" type="file" class="form-control" id="foto" value="<%= productos.foto %>">
-					</div>
-					<div class="mb-3">
-						<label for="content" class="form-label"></label>
-						<input name="artista" type="text" class="form-control" id="content" value="<%= productos.artista %>">
+						<label for="content" class="form-label"> Artista </label>
+						<input name="artista" type="text" class="form-control" id="content">
 					</div>
 					<div class="mb-3">
 						<label for="content" class="form-label">Descripción</label>
-						<input name="descripcion" type="text" class="form-control" id="content" value="<%= productos.descripcion %>">
+						<input name="descripcion" type="text" class="form-control" id="content">
 					</div>
 					<div class="mb-3">
 						<label for="foto" class="form-label">Foto</label>
-						<input name="foto" type="file" class="form-control" id="foto" value="<%= productos.foto %>">
+						<input name="foto" type="file" class="form-control" id="foto">
 					</div>
 					<div class="mb-3">
 						<label for="numeroDeEntradas" class="form-label">Numero de Entradas</label>
-						<input name="numeroDeEntradas" type="text" class="form-control" id="numeroDeEntradas" value="<%= productos.numeroEntradas %>">
+						<input name="numeroDeEntradas" type="text" class="form-control" id="numeroDeEntradas">
 					</div>
 					<button type="submit" class="btn btn-primary">Entregar</button>
 				</form>

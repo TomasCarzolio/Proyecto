@@ -6,7 +6,7 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Agregar productos</h2>
+				<h2 class="products-title"> Editar producto </h2>
 			</div>
 			<!-- Show the "ultimos" products -->
 			<h2 class="col-12">
@@ -17,7 +17,7 @@
 					</div>
                     <div class="mb-3">
 						<label for="fecha" class="form-label">Fecha</label>
-						<input name="fecha" type="number" class="form-control" id="fecha" value="<%= productos.fecha %>">
+						<input name="fecha" type="date" class="form-control" id="fecha" value="<%= productos.fecha %>">
 					</div>
 					<div class="mb-3">
 						<label for="precio" class="form-label">Precio</label>
@@ -26,10 +26,6 @@
                     <div class="mb-3">
 						<label for="content" class="form-label">Descripción</label>
 						<input name="descripcion" type="text" class="form-control" id="content" value="<%= productos.descripcion %>">
-					</div>
-					<div class="mb-3">
-						<label for="fecha" class="form-label"></label>
-						<input name="fecha" type="date" class="form-control" id="fecha" value="<%= productos.fecha %>">
 					</div>
 					<button type="submit" class="btn btn-primary">Entregar</button>
 				</form>
