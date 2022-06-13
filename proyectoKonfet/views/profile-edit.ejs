@@ -12,34 +12,26 @@
 			<h2 class="col-12">
 				<form class="form" action="/" method="POST">
 					<div class="mb-3">
-						<label for="username" class="form-label"></label>
-						<input name="nombreUsuario" type="text" class="form-control" id="username" value="<%= usuario.nombreUsuario %> " >
+						<label for="nombreUsuario" class="nombreUsuario">Nombre de usuario</label>
+						<input name="nombreUsuario" type="text" class="form-control" id="nombreUsuario" value="<%= usuario.nombreUsuario %>" >
 					</div>
 					<div class="mb-3">
-						<label for="name" class="form-label"></label>
-						<input name="nombre" type="text" class="form-control" id="name" value="<%= usuario.nombre %>" >
+						<label for="contrasenia" class="contrasenia"></label>
+						<input name="contrasenia" type="contrasenia" class="form-control" id="contrasenia"  value="<%=    usuario.contrasenia %>" >
 					</div>
 					<div class="mb-3">
-						<label for="password" class="form-label"></label>
-						<input name="contrasenia" type="password" class="form-control" id="password"  value="<%= usuario.contrasenia %>" >
+						<label for="email" class="email">Mail</label>
+						<input name="email" type="email" class="form-control" id="email" placeholder="name@example.com" value="<%= usuario.email %> ">
 					</div>
 					<div class="mb-3">
-						<label for="fecha" class="form-label"></label>
-						<input name="fechaNacimiento" type="date" class="form-control" id="fechaNacimiento" value="<%= usuario.fechaDeNac %>" >
-					</div>
-					<div class="mb-3">
-						<label for="exampleFormControlInput1" class="form-label">Mail</label>
-						<input name="email" type="email" class="form-control" id="mail" placeholder="name@example.com" value="<%= usuario.email %> ">
-					</div>
-					<div class="mb-3">
-						<label for="DNI" class="form-label">DNI</label>
+						<label for="dni" class="dni">DNI</label>
 						<input name="dni" type="number" class="form-control" id="dni" value="<%= usuario.dni %>" >
 					</div>
 					<div class="input-group mb-3">
-						<label class="input-group-text" for="cover"></label>
-						<input name="fotoDePerfil" type="file" class="form-control" id="cover" value="<%= usuario.fotoDePerfil%>" >
+						<label class="fotoDePerfil" for="cover"></label>
+						<input name="fotoDePerfil" type="file" class="form-control" id="fotoDePerfil" value="<%= usuario.fotoDePerfil%>" >
 					</div>
-					<button type="submit" class="btn btn-primary">Entregar</button>
+					<button type="submit" class="btn btn-primary">Actualizar datos</button>
 				</form>
 			</h2>
 
