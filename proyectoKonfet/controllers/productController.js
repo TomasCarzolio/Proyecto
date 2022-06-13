@@ -30,7 +30,7 @@ const controller = {
 
 store: function(req, res) {
     req.body.usuario_id = req.session.usuario.id;
-    if (req.file) req.body.cover = (req.file.path).replace('public', '');
+    if (req.file) req.body.foto = (req.file.path).replace('public', '');
     data.productos.create(req.body)
         .then(function() {
             res.redirect('/')
@@ -42,8 +42,8 @@ store: function(req, res) {
 
     edit: function(req, res) {
     producto.findByPk(req.params.id)
-        .then(function (producto) {
-            res.render('product-edit', { producto });
+        .then(function (productos) {
+            res.render('product-edit', { productos });
         })
         .catch(function (error) {
             res.send(error);

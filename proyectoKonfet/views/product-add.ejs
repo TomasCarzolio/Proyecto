@@ -20,12 +20,16 @@
 						<input name="artista" type="text" class="form-control" id="content" value="<%= productos.artista %>">
 					</div>
 					<div class="mb-3">
-						<label for="content" class="form-label"></label>
+						<label for="content" class="form-label">Descripción</label>
 						<input name="descripcion" type="text" class="form-control" id="content" value="<%= productos.descripcion %>">
 					</div>
 					<div class="mb-3">
-						<label for="fecha" class="form-label"></label>
-						<input name="fecha" type="date" class="form-control" id="fecha" value="<%= productos.fecha %>">
+						<label for="foto" class="form-label">Foto</label>
+						<input name="foto" type="file" class="form-control" id="foto" value="<%= productos.foto %>">
+					</div>
+					<div class="mb-3">
+						<label for="numeroDeEntradas" class="form-label">Numero de Entradas</label>
+						<input name="numeroDeEntradas" type="text" class="form-control" id="numeroDeEntradas" value="<%= productos.numeroEntradas %>">
 					</div>
 					<button type="submit" class="btn btn-primary">Entregar</button>
 				</form>
