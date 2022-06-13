@@ -30,7 +30,7 @@ const controller = {
 
 store: function(req, res) {
     req.body.usuario_id = req.session.usuario.id;
-    if (req.file) req.body.cover = (req.file.path).replace('public', '');
+    if (req.file) req.body.foto = (req.file.path).replace('public', '');
     data.productos.create(req.body)
         .then(function() {
             res.redirect('/')
