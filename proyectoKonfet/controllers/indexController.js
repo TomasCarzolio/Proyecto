@@ -42,7 +42,7 @@ const controller = {
         res.render('login')
     },
 
-    access: function (req, res) {
+    access: function (req, res, next) {
         usuario.findOne({ where: { nombreUsuario: req.body.nombreUsuario } })
             .then(function(usuario){
                 if (!usuario) throw Error('Nombre de usuario incorrecto.')
@@ -59,7 +59,7 @@ const controller = {
                 }
             })
             .catch(function (error) {
-                res.send(error);
+                res.render('login', { error })
             })
     },
 

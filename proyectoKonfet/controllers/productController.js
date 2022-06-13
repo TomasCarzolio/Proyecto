@@ -18,9 +18,8 @@ const controller = {
     },
 
     productAdd: function (req, res) {
-        if (!req.session.user) { 
-            alert("Inicia sesión para agregar productos.")
-            res.render('login');
+        if (!req.session.usuario) { 
+            res.redirect('/login');
         } 
         res.render('product-add');
 },
