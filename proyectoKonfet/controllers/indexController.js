@@ -8,7 +8,10 @@ const op = data.Sequelize.Op;
 
 const controller = {
     index: function (req, res) {
-        producto.findAll()
+        producto.findAll(
+            {   include: {all: true, nested: false}, 
+                order: [['id', 'DESC']]
+        })
             .then(function (productos) {
                 comentario.findAll()
                     .then(function (comentarios) {

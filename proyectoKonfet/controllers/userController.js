@@ -5,12 +5,12 @@ const productos = data.Producto;
 const controller = {
     profile: function (req, res) {
         usuario.findAll()
-            .then(function (usuarios) {
+            .then(function (usuario) {
                 productos.findAll()
                     .then(function (productos) {
                         res.render('profile',
                             {
-                                usuarios: usuarios,
+                                usuario: usuario,
                                 productos: productos,
                             })
                     })
@@ -18,7 +18,7 @@ const controller = {
     },
 
     profileEdit: function (req, res) {
-        usuario.findByPk()
+        usuario.findByPk(req.session.usuario.id)
             .then(function (usuario) {
                 res.render('profile-edit', usuario)
             })

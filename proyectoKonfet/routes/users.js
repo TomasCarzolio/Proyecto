@@ -6,6 +6,7 @@ const upload = multer({ dest: 'public/images/uploads' });
 
 router.get('/profile', controller.profile);
 router.get('/profile/edit', controller.profileEdit);
+
 router.post('/profile/update', upload.single('fotoDePerfil'), controller.profileUpdate);
 
 module.exports = router;
