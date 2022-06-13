@@ -45,7 +45,7 @@ const controller = {
     access: function (req, res) {
         usuario.findOne({ where: { nombreUsuario: req.body.nombreUsuario } })
             .then(function(usuario){
-                if (!usuario) throw Error('No se encuentra usuario.')
+                if (!usuario) throw Error('Nombre de usuario incorrecto.')
                 if (hasher.compareSync(req.body.contrasenia, usuario.contrasenia)) {
                     req.session.usuario = usuario;
                     if (req.body.rememberme) {
@@ -55,7 +55,7 @@ const controller = {
                     res.redirect('/')
                 }
                 else {
-                    throw Error('Credencial invalida')
+                    throw Error('Contraseña incorrecta')
                 }
             })
             .catch(function (error) {
