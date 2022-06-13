@@ -18,14 +18,11 @@ const controller = {
     },
 
     productAdd: function (req, res) {
-        producto.findByPk()
-        .then(function(productos){
-            res.render('product-add', productos)    
-        }) 
-
-    .catch(function(error){
-        res.send(error)
-    })
+        if (!req.session.user) { 
+            alert("Inicia sesión para agregar productos.")
+            res.render('login');
+        } 
+        res.render('product-add');
 },
 
 store: function(req, res) {
@@ -42,8 +39,8 @@ store: function(req, res) {
 
     edit: function(req, res) {
     producto.findByPk(req.params.id)
-        .then(function (producto) {
-            res.render('product-edit', { producto });
+        .then(function (productos) {
+            res.render('product-edit', { productos });
         })
         .catch(function (error) {
             res.send(error);
