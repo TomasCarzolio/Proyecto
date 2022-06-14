@@ -3,18 +3,24 @@ const usuario = data.Usuario;
 const productos = data.Producto;
 
 const controller = {
-    profile: function (req, res) {
-        usuario.findAll()
-            .then(function (usuarios) {
-                productos.findAll()
-                    .then(function (productos) {
-                        res.render('profile',
-                            {
-                                usuarios: usuarios,
-                                productos: productos,
-                            })
+
+     myProfile: function (req, res) {
+        usuario.findByPk(req.session.usuario.id, {include : [ { association: "productos"}]})
+            .then(function (usuario) {
+                        res.render('profile', { usuario })
                     })
+                    .catch(function (error) {
+                        res.send(error);
+                    });
+    },
+    profile: function(req, res) {
+        usuario.findByPk(req.params.id, { include: [ { association: 'productos' } ] })
+            .then(function (usuario) {
+                res.render('profile', { usuario });
             })
+            .catch(function (error) {
+                res.send(error)
+            });
     },
 
     profileEdit: function (req, res) {
