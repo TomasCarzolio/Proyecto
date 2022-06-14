@@ -24,7 +24,7 @@ const controller = {
     },
 
     profileEdit: function (req, res) {
-        usuario.findByPk()
+        usuario.findByPk(req.session.usuario.id)
             .then(function (usuario) {
                 res.render('profile-edit', usuario)
             })

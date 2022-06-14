@@ -1,5 +1,5 @@
 <!-- Header -->
-<%- include('./partials/headerLogueado') %>
+<%- include('./partials/header') %>
 	<!-- /Header -->
 
 	<!-- Novedades -->
@@ -12,20 +12,40 @@
 			<h2 class="col-12">
 				<form method="POST" enctype="multipart/form-data">
 					<div class="mb-3">
-						<label for="content" class="form-label"> Artista </label>
-						<input name="artista" type="text" class="form-control" id="content">
+						<label for="creado" class="form-label">Creado</label>
+						<input name="creado" type="date" class="form-control" id="creado">
 					</div>
 					<div class="mb-3">
-						<label for="content" class="form-label">Descripción</label>
-						<input name="descripcion" type="text" class="form-control" id="content">
+						<label for="actualizado" class="form-label">Actualizado</label>
+						<input name="actualizado" type="date" class="form-control" id="actualizado">
 					</div>
 					<div class="mb-3">
-						<label for="foto" class="form-label">Foto</label>
-						<input name="foto" type="file" class="form-control" id="foto">
+						<label for="artista" class="form-label"> Artista </label>
+						<input name="artista" type="text" class="form-control" id="artista">
 					</div>
 					<div class="mb-3">
-						<label for="numeroDeEntradas" class="form-label">Numero de Entradas</label>
-						<input name="numeroDeEntradas" type="text" class="form-control" id="numeroDeEntradas">
+						<label for="lugar" class="form-label">Lugar</label>
+						<input name="lugar" type="text" class="form-control" id="lugar">
+					</div>
+                    <div class="mb-3">
+						<label for="fecha" class="form-label">Fecha</label>
+						<input name="fecha" type="date" class="form-control" id="fecha">
+					</div>
+					<div class="mb-3">
+						<label for="precio" class="form-label">Precio</label>
+						<input name="precio" type="number" class="form-control" id="precio">
+					</div>
+					<div class="mb-3">
+						<label for="descripcion" class="form-label">Descripción</label>
+						<input name="descripcion" type="text" class="form-control" id="descripcion">
+					</div>
+					<div class="mb-3">
+						<label for="entrada" class="form-label"> Foto de la entrada </label>
+						<input name="entrada" type="file" class="form-control" id="entrada">
+					</div>
+					<div class="mb-3">
+						<label for="numeroEntradas" class="form-label">Número de Entradas</label>
+						<input name="numeroEntradas" type="text" class="form-control" id="numeroEntradas">
 					</div>
 					<button type="submit" class="btn btn-primary">Entregar</button>
 				</form>
