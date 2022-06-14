@@ -12,7 +12,6 @@ module.exports = function (sequelize, dataTypes) {
         fecha : { type: dataTypes.DATE },
         precio: { type: dataTypes.INTEGER },
         descripcion: { type: dataTypes.STRING(500) },
-        foto: { type: dataTypes.STRING },
         entrada: { type: dataTypes.STRING },
         numeroEntradas: { type: dataTypes.INTEGER },
         usuario_id : { type: dataTypes.INTEGER }

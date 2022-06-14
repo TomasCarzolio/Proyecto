@@ -25,16 +25,20 @@ const controller = {
     },
 
     store: function (req, res) {
-        req.body.usuario_id = req.session.usuario.id;
-        if (req.file) req.body.foto = (req.file.path).replace('public', '');
-        data.productos.create(req.body)
-            .then(function () {
-                res.redirect('/')
-            })
-            .catch(function (error) {
-                res.send(error);
-            })
-    },
+            if (!req.session.usuario) { 
+                return res.render('product-add', { error: 'Not authorized.' });
+            }
+            
+            req.body.usuario_id = req.session.usuario.id;
+            if (req.file) req.body.entrada = (req.file.path).replace('public', '');
+            producto.create(req.body)
+                .then(function () {
+                    res.redirect('/')
+                })
+                .catch(function (error) {
+                    res.send(error);
+                })
+        },
 
     edit: function (req, res) {
         producto.findByPk(req.params.id)
