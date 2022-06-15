@@ -5,7 +5,7 @@ const productos = data.Producto;
 const controller = {
 
      myProfile: function (req, res) {
-        usuario.findByPk(req.session.usuario.id, {include : [ { association: "productos"}]})
+        usuario.findByPk(req.session.usuario.id, { include : [ { association: "productos" }, { association : "comentarios" }]})
             .then(function (usuario) {
                         res.render('profile', { usuario })
                     })
@@ -14,7 +14,7 @@ const controller = {
                     });
     },
     profile: function(req, res) {
-        usuario.findByPk(req.params.id, { include: [ { association: 'productos' } ] })
+        usuario.findByPk(req.params.id, { include: [ { association: 'productos' } , { association : "comentarios" }] })
             .then(function (usuario) {
                 res.render('profile', { usuario });
             })

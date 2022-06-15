@@ -78,7 +78,8 @@ const controller = {
                 [op.or]: [
                     { artista: { [op.like]: "%"+req.query.search+"%"} },
                     { lugar: { [op.like]: "%"+req.query.search+"%"} },
-                    { fecha: { [op.like]: "%"+req.query.search+"%"} }
+                    { fecha: { [op.like]: "%"+req.query.search+"%"} },
+                    { descripcion: { [op.like]: "%"+req.query.search+"%"} }
                 ]
             },
             include: [ { association: 'usuario' } ] 

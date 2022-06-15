@@ -21,10 +21,15 @@ module.exports = function (sequelize, dataTypes) {
     const Usuario = sequelize.define('Usuario', cols, configs);
     
     Usuario.associate = function(modelos){
-        Usuario.hasMany( modelos.Producto , {
+        Usuario.hasMany(modelos.Producto , {
             as: "productos",
             foreignKey: "usuario_id"
         });
+
+        Usuario.hasMany(modelos.Comentario, {
+            as : "comentarios",
+            foreignKey: "usuario_id"
+        })
     };
     return Usuario;
 }
