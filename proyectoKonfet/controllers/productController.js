@@ -28,7 +28,7 @@ const controller = {
             if (!req.session.usuario) { 
                 return res.render('product-add', { error: 'Not authorized.' });
             }
-            
+
             req.body.usuario_id = req.session.usuario.id;
             if (req.file) req.body.entrada = (req.file.path).replace('public', '');
             producto.create(req.body)

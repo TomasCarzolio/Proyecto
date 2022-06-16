@@ -6,7 +6,7 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src="public/images/uploads<%= usuario.fotoDePerfil %>" alt="foto de perfil" class="foto-perfil">
+				<img src="<%= usuario.fotoDePerfil %>" alt="foto de perfil" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
@@ -51,12 +51,13 @@
 									<%= usuario.productos[i].artista %> - <%= usuario.productos[i].lugar %>
 								</h2>
 								<p>
-									<%= usuario.productos[i].fecha %> - <%= usuario.productos[i].precio %>
-								</p>
+									<%= usuario.productos[i].fecha %> 
+								</p>	
 								<p>
-									Dueño: 	<%= usuario.productos[i].productos?.nombreUsuario %>
+									$ <%= usuario.productos[i].precio %> 
 								</p>
-								<p>Comentarios: <%= usuario.comentarios.length %> </p>
+								
+								<p> Comentarios: <%= usuario.comentarios.length %> </p>
 							</article>
 						</a>
 					</section>
