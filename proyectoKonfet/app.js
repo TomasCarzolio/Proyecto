@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req, res, next) {
   if (!req.session.usuario && req.cookies.usuarioId) {
     // Find the user
-    data.Usario.findByPk(req.cookies.usuarioId)
+    data.Usuario.findByPk(req.cookies.usuarioId)
     .then(function(data) {
       // Act as login
       req.session.usuario = data;

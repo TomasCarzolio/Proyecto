@@ -31,6 +31,10 @@ const controller = {
     },
 
     store: function (req, res) {
+        if (req.body.contrasenia.length < 3) { throw Error('La contraseña es demasiada corta.') }
+
+        if (req.file) req.body.fotoDePerfil = "/images/uploads/" + req.file.filename;
+        
         req.body.contrasenia = hasher.hashSync(req.body.contrasenia, 10);
         usuario.create(req.body)
             .then(function () {
@@ -46,12 +50,12 @@ const controller = {
     },
 
     access: function (req, res, next) {
-        usuario.findOne({ where: { nombreUsuario: req.body.nombreUsuario } })
+        usuario.findOne({ where: { email: req.body.email } })
             .then(function(usuario){
                 if (!usuario) throw Error('Nombre de usuario incorrecto.')
                 if (hasher.compareSync(req.body.contrasenia, usuario.contrasenia)) {
                     req.session.usuario = usuario;
-                    if (req.body.rememberme) {
+                    if (req.body.recordame) {
                         // Guardo del lado del cliente 
                         res.cookie('usuarioId', usuario.id, {maxAge : 1000 * 60 *60 * 7})
                     }

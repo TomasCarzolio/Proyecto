@@ -35,7 +35,7 @@ const controller = {
 
     profileUpdate: function (req, res) {
         if (req.file) req.body.fotoDePerfil = (req.file.path).replace('public', '');
-        data.usuario.update(req.body, { where: { usuario_id: req.params.id } })
+        usuario.update(req.body, { where: { usuario_id: req.params.id } })
             .then(function () {
                 res.redirect('/')
             })
