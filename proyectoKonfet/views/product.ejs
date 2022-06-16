@@ -8,48 +8,68 @@
 			<h2 class="products-title"> Concierto
 				<%= producto.artista %>
 			</h2>
-			<p class="product-detail-description">
-				<a href="/products/<%= producto.id %>/edit"> Editar </a>
-			</p>
+			<% if (locals.usuario) { %>
+				<p class="product-detail-description">
+					<a href="/products/<%= producto.id %>/edit"> Editar </a>
+				</p>
+			<% } %>
 		</div>
+		
 
-		<div class="product-detail">
-			<div class="row">
-				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= producto.entrada %>" alt="" class="product-detail-img">
-					<p class="product-detail-description">
-						<%= producto.descripcion %>
-					</p>
-				</article>
-				<div class="col-12 col-lg-4">
-					<section class="comments">
-						<% for(let i=0; i < comentarios.length; i++) { %>
-							<article>
-								<img src="/images/anonimo.jpg" alt="">
-								<div class="data">
-									<p class="user">
-										<strong> <a href="/users/profile">
-												<%= comentarios[i].nombreUsuario %>
-											</a>
-										</strong>
-										<%= comentarios[i].comentario %>
-									</p>
-								</div>
+			<% if (locals.me && me.id==producto.usuario_id) { %>
+				<form action="/products/<%= producto.id %>/delete" method="post">
+					<button type="submit" class="btn btn-danger"> Borrar </button>
+					<!-- <input class="btn btn-danger" type="submit" value="Borrar"> -->
+				</form>
+				<% } %>
+
+					<div class="product-detail">
+						<div class="row">
+							<article class="col-12 col-lg-8 product-detail-info">
+								<img src="<%= producto.entrada %>" alt="" class="product-detail-img">
+								<p class="product-detail-description">
+									<%= producto.descripcion %>
+								</p>
 							</article>
-							<% } %>
-					</section>
-					<form class="form" action="/products/<%= producto.id %>" method="GET">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-					</form>
-				</div>
-			</div>
-		</div>
+							<div class="col-12 col-lg-4">
+								<section class="comments">
+									<% for(let i=0; i < comentarios.length; i++) { %>
+										<article>
+											<img src="<%= comentarios[i].usuario.fotoDePerfil %> " alt="">
+											<div class="data">
+												<p class="user">
+													<strong> <a href="/users/<%= comentarios[i].usuario_id %>">
+															<%= comentarios[i].usuario.nombreUsuario %>
+														</a>
+													</strong>
+													<%= comentarios[i].contenido %>
+												</p>
+											</div>
+										</article>
+										<% } %>
+								</section>
 
-		<!-- /product detail -->
+								<form class="form" action="/products/<%= producto.id %>/comment" method="POST">
+									<div class="mb-3">
+										<label for="creado" class="form-label">Creado</label>
+										<input name="creado" type="date" class="form-control" id="creado">
+									</div>
+									<div>
+										<label for="contenido" class="form-label">Comentarios</label>
+										<input type="textarea" class="form-control mb-2" name="contenido"
+											id="contenido">
+									</div>
+									<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+								</form>
 
-		<!-- /product detail -->
+							</div>
+						</div>
+					</div>
 
-		<!-- footer -->
-		<%- include('./partials/footer') %>
-			<!-- /footer -->
+					<!-- /product detail -->
+
+					<!-- /product detail -->
+
+					<!-- footer -->
+					<%- include('./partials/footer') %>
+						<!-- /footer -->

@@ -6,7 +6,7 @@ const controller = {
     product: function (req, res) {
         producto.findByPk(req.params.producto)
             .then(function (producto) {
-                comentario.findAll({ where: { producto_id: req.params.producto } })
+                comentario.findAll({ where: { producto_id: req.params.producto}, include: [ { association: 'usuario' } ] })
                     .then(function (comentarios) {
                         res.render('product', { producto, comentarios })
                     });
@@ -28,7 +28,7 @@ const controller = {
             if (!req.session.usuario) { 
                 return res.render('product-add', { error: 'Not authorized.' });
             }
-            
+
             req.body.usuario_id = req.session.usuario.id;
             if (req.file) req.body.entrada = (req.file.path).replace('public', '');
             producto.create(req.body)
@@ -59,7 +59,37 @@ const controller = {
             .catch(function (error) {
                 res.send(error);
             })
-    }
+    },
+
+    delete: function(req, res) {
+        if (!req.session.usuario) {
+            throw Error('No está autorizado!')
+        }
+        producto.destroy({ where: { id: req.params.id } })
+            .then(function() {
+                res.redirect('/')
+            })
+            .catch(function(error) {
+                res.send(error);
+            })
+    },
+
+    comment: function(req, res) {
+        if (!req.session.usuario) {
+            res.redirect('/login')
+        }
+
+        req.body.usuario_id = req.session.usuario.id;
+
+        req.body.producto_id = req.params.id;
+        comentario.create(req.body)
+            .then(function() {
+                res.redirect('products' + req.params.id)
+            })
+            .catch(function(error) {
+                res.send(error);
+            })
+     },
 };
 
 module.exports = controller;
