@@ -32,7 +32,9 @@ const controller = {
         }
 
         req.body.usuario_id = req.session.usuario.id;
-        if (req.file) req.body.entrada = (req.file.path).replace('public', '');
+
+        if (req.file) req.body.entrada = "/images/uploads/" + req.file.filename;
+        
         producto.create(req.body)
             .then(function () {
                 res.redirect('/')
@@ -53,7 +55,9 @@ const controller = {
     },
 
     update: function (req, res) {
-        if (req.file) req.body.entrada = (req.file.path).replace('public', '');
+
+    if (req.file) req.body.entrada = "/images/uploads/" + req.file.filename;
+
         producto.update(req.body, { where: { id: req.params.id } })
             .then(function () {
                 res.redirect('/')

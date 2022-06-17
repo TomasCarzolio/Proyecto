@@ -34,7 +34,7 @@ const controller = {
     },
 
     profileUpdate: function (req, res) {
-        if (req.file) req.body.fotoDePerfil = (req.file.path).replace('public', '');
+        if (req.file) req.body.fotoDePerfil = "/images/uploads/" + req.file.filename;
         usuario.update(req.body, { where: { usuario_id: req.params.id } })
             .then(function () {
                 res.redirect('/')
