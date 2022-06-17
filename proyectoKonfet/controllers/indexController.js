@@ -31,7 +31,10 @@ const controller = {
     },
 
     store: function (req, res) {
-        if (req.body.contrasenia.length < 3) { throw Error('La contraseña es demasiada corta.') }
+
+        if (req.body.contrasenia.length < 3) { throw new Error('La contraseña es demasiada corta.') }
+
+        if (!req.body.email) { throw new Error('No se proporciona correo electrónico.') }
 
         if (req.file) req.body.fotoDePerfil = "/images/uploads/" + req.file.filename;
         
@@ -77,6 +80,8 @@ const controller = {
     },
 
     searchResults: function(req, res) {
+        search = req.query.search  
+
         producto.findAll({ 
             where: {
                 [op.or]: [
@@ -86,9 +91,11 @@ const controller = {
                     { descripcion: { [op.like]: "%"+req.query.search+"%"} }
                 ]
             },
-            include: [ { association: 'usuario' } ] 
+            include: [ { association: 'usuario' } ]
+            
+            
         }).then(function (productos) {
-                res.render('search-results', { productos });
+                res.render('search-results', { productos});
             })
             .catch(function (error) {
                 res.send(error)
