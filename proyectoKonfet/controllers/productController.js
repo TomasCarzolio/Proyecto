@@ -53,7 +53,9 @@ const controller = {
     },
 
     update: function (req, res) {
-        if (req.file) req.body.entrada = "/images/uploads/" + req.file.filename;
+
+    if (req.file) req.body.entrada = "/images/uploads/" + req.file.filename;
+
         producto.update(req.body, { where: { id: req.params.id } })
             .then(function () {
                 res.redirect('/')
