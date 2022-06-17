@@ -4,9 +4,9 @@ const comentario = data.Comentario;
 
 const controller = {
     product: function (req, res) {
-        producto.findByPk(req.params.producto)
+        producto.findByPk(req.params.producto, { include: { all: true, nested: true } })
             .then(function (producto) {
-                comentario.findAll({ where: { producto_id: req.params.producto}, include: [ { association: 'usuario' } ] })
+                comentario.findAll({ where: { producto_id: req.params.producto }, include: [{ association: 'usuario' }], order: [['id', 'DESC']] })
                     .then(function (comentarios) {
                         res.render('product', { producto, comentarios })
                     });
@@ -25,20 +25,20 @@ const controller = {
     },
 
     store: function (req, res) {
-            if (!req.session.usuario) { 
-                return res.render('product-add', { error: 'Not authorized.' });
-            }
+        if (!req.session.usuario) {
+            return res.render('product-add', { error: 'Not authorized.' });
+        }
 
-            req.body.usuario_id = req.session.usuario.id;
-            if (req.file) req.body.entrada = (req.file.path).replace('public', '');
-            producto.create(req.body)
-                .then(function () {
-                    res.redirect('/')
-                })
-                .catch(function (error) {
-                    res.send(error);
-                })
-        },
+        req.body.usuario_id = req.session.usuario.id;
+        if (req.file) req.body.entrada = (req.file.path).replace('public', '');
+        producto.create(req.body)
+            .then(function () {
+                res.redirect('/')
+            })
+            .catch(function (error) {
+                res.send(error);
+            })
+    },
 
     edit: function (req, res) {
         producto.findByPk(req.params.id)
@@ -51,7 +51,7 @@ const controller = {
     },
 
     update: function (req, res) {
-        if (req.file) req.body.foto = (req.file.path).replace('public', '');
+        if (req.file) req.body.entrada = (req.file.path).replace('public', '');
         producto.update(req.body, { where: { id: req.params.id } })
             .then(function () {
                 res.redirect('/')
@@ -61,20 +61,20 @@ const controller = {
             })
     },
 
-    delete: function(req, res) {
+    delete: function (req, res) {
         if (!req.session.usuario) {
             throw Error('No está autorizado!')
         }
         producto.destroy({ where: { id: req.params.id } })
-            .then(function() {
+            .then(function () {
                 res.redirect('/')
             })
-            .catch(function(error) {
+            .catch(function (error) {
                 res.send(error);
             })
     },
 
-    comment: function(req, res) {
+    comment: function (req, res) {
         if (!req.session.usuario) {
             res.redirect('/login')
         }
@@ -83,13 +83,13 @@ const controller = {
 
         req.body.producto_id = req.params.id;
         comentario.create(req.body)
-            .then(function() {
-                res.redirect('products' + req.params.id)
+            .then(function () {
+                res.redirect('/product/' + req.params.id)
             })
-            .catch(function(error) {
+            .catch(function (error) {
                 res.send(error);
             })
-     },
+    },
 };
 
 module.exports = controller;
