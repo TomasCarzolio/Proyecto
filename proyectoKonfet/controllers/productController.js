@@ -6,10 +6,11 @@ const controller = {
     product: function (req, res) {
         if (req.file) req.body.entrada = "/images/uploads/" + req.file.filename;
 
-        producto.findByPk(req.params.producto, { include: { all: true, nested: true } })
+        producto.findByPk(req.params.producto, { include: { all: true, nested: true }})
             .then(function (producto) {
                 comentario.findAll({ where: { producto_id: req.params.producto }, include: [{ association: 'usuario' }], order: [['id', 'DESC']] })
                     .then(function (comentarios) {
+                        console.log('el comentario es :' + comentarios.usuario_id);
                         res.render('product', { producto, comentarios })
                     });
             })

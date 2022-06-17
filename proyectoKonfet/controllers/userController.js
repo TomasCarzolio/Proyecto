@@ -14,7 +14,7 @@ const controller = {
                     });
     },
     profile: function(req, res) {
-        usuario.findByPk(req.params.id, { include: [ { association: 'productos' } , { association : "comentarios" }] })
+        usuario.findByPk(req.params.profile, { include: [ { association: 'productos' } , { association : "comentarios" }] })
             .then(function (usuario) {
                 res.render('profile', { usuario });
             })

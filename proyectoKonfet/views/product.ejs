@@ -29,10 +29,16 @@
 							<article>
 								<img src="<%= comentarios[i].usuario.fotoDePerfil %> " alt="">
 								<div class="data">
-									<p class="user">
-										<strong> <a href="/users/<%= comentarios[i].usuario_id %>">
+									<p class="user" > 
+										<% if (locals.usuario.id && usuario.id == comentarios[i].usuario_id) { %>
+											<strong> <a href="/users/me">
+												<%= comentarios[i].usuario.nombreUsuario %> 
+											</a> </strong>
+											<% } else { %>
+										<strong> <a href="/users/<%= comentarios[i].usuario_id %>"> 
 												<%= comentarios[i].usuario.nombreUsuario %>
 											</a> </strong>
+											<% } %>
 										<%= comentarios[i].contenido %>
 									</p>
 								</div>
