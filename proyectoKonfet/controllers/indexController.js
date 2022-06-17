@@ -8,6 +8,8 @@ const op = data.Sequelize.Op;
 
 const controller = {
     index: function (req, res) {
+        if (req.file) req.body.entrada = "/images/uploads/" + req.file.filename;
+        
         producto.findAll(
             {   include: {all: true, nested: false}, 
                 order: [['id', 'DESC']]

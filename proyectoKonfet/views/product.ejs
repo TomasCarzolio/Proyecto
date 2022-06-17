@@ -8,7 +8,7 @@
 			<h2 class="products-title"> Concierto
 				<%= producto.artista %>
 			</h2>
-			<% if (locals.usuario.id == producto.usuario_id) { %>
+			<% if (locals.usuario && usuario.id == producto.usuario_id) { %>
 				<p class="product-detail-description">
 					<a href="/products/<%= producto.id %>/edit"> Editar </a>
 				</p>
@@ -40,7 +40,7 @@
 							<% } %>
 					</section>
 
-					<form class="form" action="/product/<%= producto.id %>/comment" method="POST">
+					<form class="form" action="/products/<%= producto.id %>/comment" method="POST">
 						<div class="mb-3">
 							<label for="creado" class="form-label">Creado</label>
 							<input name="creado" type="date" class="form-control" id="creado">
@@ -52,7 +52,7 @@
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
 
-					<% if (locals.usuario.id == producto.usuario_id) { %>
+					<% if (locals.usuario && usuario.id == producto.usuario_id) { %>
 						<form action="/products/<%= producto.id %>/delete" method="post">
 							<input class="d-grid gap-2 col-6 mx-auto btn-danger buy-now-button" type="submit" value="Borrar">
 						  </form>
