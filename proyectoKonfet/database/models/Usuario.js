@@ -9,13 +9,15 @@ module.exports = function (sequelize, dataTypes) {
         email: { type: dataTypes.STRING },
         fotoDePerfil: { type: dataTypes.STRING },
         dni: { type: dataTypes.INTEGER },
-        contrasenia : { type : dataTypes.STRING}
+        contrasenia : { type : dataTypes.STRING},
+        creado : { type: dataTypes.DATE },
+        actualizado : { type: dataTypes.DATE }
     }
 
 
     const configs = {
         tableName: 'usuarios',
-        timestamps: false
+        timestamps: true
     }
 
     const Usuario = sequelize.define('Usuario', cols, configs);
