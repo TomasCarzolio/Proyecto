@@ -6,8 +6,8 @@
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
 			<h2 class="products-title"> Concierto
-				<%= producto.artista %>
-			</h2>
+				<%= producto.artista %> | <%= producto.fecha %> </h2>
+			
 			<% if (locals.usuario && usuario.id == producto.usuario_id) { %>
 				<p class="product-detail-description">
 					<a href="/products/<%= producto.id %>/edit"> Editar </a>
@@ -19,6 +19,8 @@
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
 					<img src="<%= producto.entrada %>" alt="" class="product-detail-img">
+					<p class="product-detail-description">Precio: $ <%= producto.precio %></p> 
+					<p class="product-detail-description"> Ubicación: <%= producto.lugar %> </p>
 					<p class="product-detail-description">
 						<%= producto.descripcion %>
 					</p>
