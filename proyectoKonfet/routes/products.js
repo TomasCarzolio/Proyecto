@@ -23,6 +23,7 @@ router.post('/add', upload.single('entrada'), controller.store);
 router.get('/:producto', controller.product);
 
 router.get('/:id/edit', controller.edit);
+
 router.post('/:id/edit', upload.single('entrada'), controller.update);
 
 router.post('/:id/delete', controller.delete);

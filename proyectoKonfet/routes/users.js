@@ -20,7 +20,7 @@ router.get('/me', controller.myProfile);
 
 router.get('/profile/edit', controller.profileEdit);
 
-router.post('/profile/update', upload.single('fotoDePerfil'), controller.profileUpdate);
+router.post('/profile/edit', upload.single('fotoDePerfil'), controller.profileUpdate);
 
 router.get('/:profile', controller.profile);
 
