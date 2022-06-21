@@ -33,7 +33,7 @@
 										<p>
 											<%= productos[i].descripcion %>
 										</p>
-										<% if (locals.me && usuario.id == productos[i].usuario_id){ %> 
+										<% if (locals.me && me.id == productos[i].usuario_id){ %> 
 											<p> 	 
 												Dueño: <a href="/users/me"><%= productos[i].usuario.nombreUsuario %></a>
 											</p>
