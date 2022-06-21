@@ -8,7 +8,7 @@
 			<h2 class="products-title"> Concierto
 				<%= producto.artista %> | <%= producto.fecha %> </h2>
 			
-			<% if (locals.usuario && usuario.id == producto.usuario_id) { %>
+			<% if (locals.me && usuario.id == producto.usuario_id) { %>
 				<p class="product-detail-description">
 					<a href="/products/<%= producto.id %>/edit"> Editar </a>
 				</p>
@@ -24,6 +24,15 @@
 					<p class="product-detail-description">
 						<%= producto.descripcion %>
 					</p>
+					<% if (locals.me && usuario.id == producto.usuario_id){ %> 
+						<p class="product-detail-description"> 	 
+							Publicado por: <a href="/users/me"><%= producto.usuario.nombreUsuario %></a>
+						</p>
+					<% } else { %> 
+						<p class="product-detail-description"> 	 
+							Dueño: <a href="/users/<%= producto.usuario.id %> "><%= producto.usuario.nombreUsuario %></a>
+						</p>
+						<% } %> 
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
@@ -32,7 +41,7 @@
 								<img src="<%= comentarios[i].usuario.fotoDePerfil %> " alt="">
 								<div class="data">
 									<p class="user" > 
-										<% if (locals.usuario && usuario.id == comentarios[i].usuario_id) { %>
+										<% if (locals.me && usuario.id == comentarios[i].usuario_id) { %>
 											<strong> <a href="/users/me">
 												<%= comentarios[i].usuario.nombreUsuario %> 
 											</a> </strong>
@@ -49,10 +58,6 @@
 					</section>
 
 					<form class="form" action="/products/<%= producto.id %>/comment" method="POST">
-						<div class="mb-3">
-							<label for="creado" class="form-label">Creado</label>
-							<input name="creado" type="date" class="form-control" id="creado">
-						</div>
 						<div>
 							<label for="contenido" class="form-label">Comentarios</label>
 							<input type="textarea" class="form-control mb-2" name="contenido" id="contenido">
@@ -60,7 +65,7 @@
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
 
-					<% if (locals.usuario && usuario.id == producto.usuario_id) { %>
+					<% if (locals.me && me.id == producto.usuario_id) { %>
 						<form action="/products/<%= producto.id %>/delete" method="post">
 							<input class="d-grid gap-2 col-6 mx-auto btn-danger buy-now-button" type="submit" value="Borrar">
 						  </form>

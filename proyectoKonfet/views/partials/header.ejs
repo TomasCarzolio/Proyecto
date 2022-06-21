@@ -55,9 +55,9 @@
 
             <ul class="right-navbar">
 
-                <% if (locals.usuario) { %>
+                <% if (locals.me) { %>
                     <li class="nav-item">
-                        <a class="nav-link"> Hola <%= usuario.nombreUsuario %>! </a>
+                        <a class="nav-link"> Hola <%= me.nombreUsuario %>! </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/users/me"> Mi perfil <i class="far fa-address-card"></i> </a>

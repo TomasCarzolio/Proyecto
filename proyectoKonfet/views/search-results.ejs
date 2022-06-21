@@ -33,10 +33,15 @@
 										<p>
 											<%= productos[i].descripcion %>
 										</p>
-										<p>
-											Dueño: <a href="/users/<%= productos[i].usuario.id %>"><%= productos[i].usuario.nombreUsuario %></a>
-										</p>
-										
+										<% if (locals.me && usuario.id == productos[i].usuario_id){ %> 
+											<p> 	 
+												Dueño: <a href="/users/me"><%= productos[i].usuario.nombreUsuario %></a>
+											</p>
+										<% } else { %> 
+											<p> 	 
+												Dueño: <a href="/users/<%= productos[i].usuario.id %> "><%= productos[i].usuario.nombreUsuario %></a>
+											</p>
+											<% } %> 
 						</div>
 						<% } %>
 

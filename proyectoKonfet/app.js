@@ -47,7 +47,7 @@ app.use(function(req, res, next) {
 
 // Session middleware
 app.use(function(req, res, next) {
-  res.locals.usuario = req.session.usuario;
+  res.locals.me = req.session.usuario;
   next();
 })
 

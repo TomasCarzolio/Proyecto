@@ -4,13 +4,10 @@ const comentario = data.Comentario;
 
 const controller = {
     product: function (req, res) {
-        if (req.file) req.body.entrada = "/images/uploads/" + req.file.filename;
-
-        producto.findByPk(req.params.producto, { include: { all: true, nested: true }})
+        producto.findByPk(req.params.producto, { include: { all: true, nested: true } })
             .then(function (producto) {
                 comentario.findAll({ where: { producto_id: req.params.producto }, include: [{ association: 'usuario' }], order: [['id', 'DESC']] })
                     .then(function (comentarios) {
-                        console.log('el comentario es :' + comentarios.usuario_id);
                         res.render('product', { producto, comentarios })
                     });
             })
@@ -33,7 +30,7 @@ const controller = {
         }
 
         req.body.usuario_id = req.session.usuario.id;
-        if (req.file) req.body.entrada = "/images/uploads/" + req.file.filename;
+        if (req.file) req.body.entrada = (req.file.path).replace('public', '');
         producto.create(req.body)
             .then(function () {
                 res.redirect('/')
@@ -54,9 +51,7 @@ const controller = {
     },
 
     update: function (req, res) {
-
-    if (req.file) req.body.entrada = "/images/uploads/" + req.file.filename;
-
+        if (req.file) req.body.entrada = (req.file.path).replace('public', '');
         producto.update(req.body, { where: { id: req.params.id } })
             .then(function () {
                 res.redirect('/')
@@ -70,8 +65,6 @@ const controller = {
         if (!req.session.usuario) {
             throw Error('No está autorizado!')
         }
-
-        comentario.destroy({ where: { producto_id: req.params.id } })
         producto.destroy({ where: { id: req.params.id } })
             .then(function () {
                 res.redirect('/')
@@ -91,7 +84,7 @@ const controller = {
         req.body.producto_id = req.params.id;
         comentario.create(req.body)
             .then(function () {
-                res.redirect('/products/' + req.params.id)
+                res.redirect('/product/' + req.params.id)
             })
             .catch(function (error) {
                 res.send(error);

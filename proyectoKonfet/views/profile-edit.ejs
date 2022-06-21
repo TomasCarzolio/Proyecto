@@ -9,31 +9,37 @@
 				<h2 class="products-title">Editar mi perfil</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12">
-				<form class="form" action="/" method="POST" enctype="multipart/form-data">
-					<div class="mb-3">
-						<label for="nombreUsuario" class="nombreUsuario">Nombre de usuario</label>
-						<input name="nombreUsuario" type="text" class="form-control" id="nombreUsuario" value="<%= usuario.nombreUsuario %>" >
-					</div>
-					<div class="mb-3">
-						<label for="contrasenia" class="contrasenia"> Contraseña </label>
-						<input name="contrasenia" type="contrasenia" class="form-control" id="contrasenia" >
-					</div>
-					<div class="mb-3">
-						<label for="email" class="email">Mail</label>
-						<input name="email" type="email" class="form-control" id="email" placeholder="name@example.com" value="<%= usuario.email %> ">
-					</div>
-					<div class="mb-3">
-						<label for="dni" class="dni">DNI</label>
-						<input name="dni" type="number" class="form-control" id="dni" value="<%= usuario.dni %>" >
-					</div>
-					<div class="input-group mb-3">
-						<label class="fotoDePerfil" for="cover"></label>
-						<input name="fotoDePerfil" type="file" class="form-control" id="fotoDePerfil" value="<%= usuario.fotoDePerfil%>" >
-					</div>
-					<button type="submit" class="btn btn-primary">Actualizar datos</button>
-				</form>
-			</h2>
+			<form method="POST" enctype="multipart/form-data">
+				<article>
+						<div class="mb-3">
+							<label for="nombreUsuario" class="form-label">Nombre de usuario</label>
+							<input name="nombreUsuario" type="text" class="form-control" id="nombreUsuario" value="<%= usuario.nombreUsuario %>">
+						</div>
+
+						<div class="mb-3">
+							<label for="contrasenia" class="form-label"> Cambiar contraseña </label>
+							<input name="contrasenia" type="password" class="form-control" id="contrasenia">
+						</div>
+
+						<div class="mb-3">
+							<label for="email" class="form-label">Email</label>
+							<input name="email" type="email" class="form-control" id="email"
+								value="<%= usuario.email %>">
+						</div>
+
+						<div class="mb-3">
+							<label for="dni" class="form-label">DNI</label>
+							<input name="dni" type="number" class="form-control" id="dni" value="<%= usuario.dni %>">
+						</div>
+
+						<div class="input-group mb-3">
+							<label for="fotoDePerfil" class="form-label"> Nueva foto de perfil </label>
+							<input name="fotoDePerfil" type="file" class="form-control" id="fotoDePerfil">
+						</div>
+	
+							<h2 class="col-12"><button type="submit" class="btn btn-primary">Entregar</button></h2>
+				</article>
+			</form>
 
 			<!-- footer -->
 			<%- include('./partials/footer') %>

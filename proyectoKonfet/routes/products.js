@@ -18,6 +18,7 @@ const upload = multer({storage : storage})
     
 
 router.get('/add', controller.productAdd);
+
 router.post('/add', upload.single('entrada'), controller.store);
 
 router.get('/:producto', controller.product);
