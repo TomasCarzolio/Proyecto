@@ -34,7 +34,7 @@ const controller = {
 
     store: function (req, res) {
 
-        if (req.body.contrasenia.length < 3) { throw new Error('La contraseña es demasiada corta.') }
+        if (req.body.contrasenia.length < 3) { throw Error('La contraseña es demasiada corta.') }
 
         if (!req.body.email) { throw new Error('No se proporciona correo electrónico.') }
 

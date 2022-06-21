@@ -1,6 +1,7 @@
 const { localsName } = require('ejs');
 const data = require('../database/models');
 const usuario = data.Usuario;
+const hasher = require('bcryptjs')
 
 const controller = {
 
@@ -34,7 +35,14 @@ const controller = {
     },
  
     profileUpdate: function (req, res) {
+        if (req.body.contrasenia.length > 1 && req.body.contrasenia.length < 3) { throw Error('La contraseña es demasiada corta.') }
+
         if (req.file) req.body.fotoDePerfil = "/images/uploads/" + req.file.filename;
+
+        if ( req.body.contrasenia.length == 0) { req.body.contrasenia = req.session.usuario.contrasenia }
+
+        console.log( req.session.usuario.contrasenia);
+        
         usuario.update(req.body, { where: { id: req.session.usuario.id } })
             .then(function () {
                 res.redirect('/')

@@ -79,12 +79,18 @@ const controller = {
             res.redirect('/login')
         }
 
+        if (req.body.contenido.length <= 0) { throw new Error('No se pueden subir comentarios vacios!') }
+        
+
         req.body.usuario_id = req.session.usuario.id;
 
         req.body.producto_id = req.params.id;
         comentario.create(req.body)
+
             .then(function () {
+               
                 res.redirect('/product/' + req.params.id)
+                
             })
             .catch(function (error) {
                 res.send(error);
