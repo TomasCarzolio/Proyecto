@@ -1,4 +1,3 @@
-const { localsName } = require('ejs');
 const data = require('../database/models');
 const usuario = data.Usuario;
 const hasher = require('bcryptjs')
@@ -41,7 +40,7 @@ const controller = {
 
         if ( req.body.contrasenia.length == 0) { req.body.contrasenia = req.session.usuario.contrasenia }
 
-        console.log( req.session.usuario.contrasenia);
+        req.body.contrasenia = hasher.hashSync(req.body.contrasenia, 10);
         
         usuario.update(req.body, { where: { id: req.session.usuario.id } })
             .then(function () {

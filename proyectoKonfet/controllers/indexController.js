@@ -9,7 +9,7 @@ const op = data.Sequelize.Op;
 const controller = {
     index: function (req, res) {
         if (req.file) req.body.entrada = "/images/uploads/" + req.file.filename;
-        
+
         producto.findAll(
             {   include: {all: true, nested: false}, 
                 order: [['id', 'DESC']]
@@ -39,6 +39,8 @@ const controller = {
         if (!req.body.email) { throw new Error('No se proporciona correo electrónico.') }
 
         if (req.file) req.body.fotoDePerfil = "/images/uploads/" + req.file.filename;
+
+        if (req.body.fotoDePerfil == null) { req.body.fotoDePerfil = "https://st.depositphotos.com/2218212/2938/i/450/depositphotos_29387653-stock-photo-facebook-profile.jpg" }
         
         req.body.contrasenia = hasher.hashSync(req.body.contrasenia, 10);
         usuario.create(req.body)
