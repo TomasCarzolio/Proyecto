@@ -27,7 +27,7 @@ router.get('/:id/edit', controller.edit);
 
 router.post('/:id/edit', upload.single('entrada'), controller.update);
 
-router.post('/:id/delete', controller.delete);
+router.get('/:id/delete', controller.delete);
 
 router.post('/:id/comment', controller.comment);
 

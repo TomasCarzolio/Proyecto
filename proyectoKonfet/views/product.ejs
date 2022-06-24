@@ -11,7 +11,10 @@
 			<% if (locals.me && me.id == producto.usuario_id) { %>
 				<p class="product-detail-description">
 					<a href="/products/<%= producto.id %>/edit"> Editar </a>
+					|
+					<a href="/products/<%= producto.id %>/delete" > Borrar producto </a>
 				</p>
+				
 				<% } %>
 		</div>
 
@@ -23,6 +26,9 @@
 					<p class="product-detail-description"> Ubicación: <%= producto.lugar %> </p>
 					<p class="product-detail-description">
 						<%= producto.descripcion %>
+					</p>
+					<p class="product-detail-description">
+						Cantidad de entradas: <%= producto.numeroEntradas %> 
 					</p>
 					<% if (locals.me && me.id == producto.usuario_id){ %> 
 						<p class="product-detail-description"> 	 
@@ -64,12 +70,6 @@
 						</div>
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
-
-					<% if (locals.me && me.id == producto.usuario_id) { %>
-						<form action="/products/<%= producto.id %>/delete" method="post">
-							<input class="d-grid gap-2 col-6 mx-auto btn-danger buy-now-button" type="submit" value="Borrar">
-						  </form>
-						<% } %>
 				</div>
 			</div>
 		</div>

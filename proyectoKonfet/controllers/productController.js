@@ -26,7 +26,7 @@ const controller = {
 
     store: function (req, res) {
         if (!req.session.usuario) {
-            return res.render('product-add', { error: 'Not authorized.' });
+            return res.render('product-add', { error: 'No estás autorizado!' });
         }
 
         req.body.usuario_id = req.session.usuario.id;
@@ -41,9 +41,17 @@ const controller = {
     },
 
     edit: function (req, res) {
+        if (!req.session.usuario) {
+            throw Error ('No estás autorizado!');
+        } 
+
         producto.findByPk(req.params.id)
             .then(function (producto) {
-                res.render('product-edit', { producto });
+                if (req.session.usuario.id !== producto.usuario_id){
+                    throw new Error ('No puedes editar productos ajenos!')} 
+                else { 
+                        res.render('product-edit', { producto })
+                    };
             })
             .catch(function (error) {
                 res.send(error);

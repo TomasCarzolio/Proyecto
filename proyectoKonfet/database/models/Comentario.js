@@ -5,7 +5,7 @@ module.exports = function (sequelize, dataTypes) {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        creado : { type: dataTypes.DATE },
+        createdAt : { type: dataTypes.DATE },
         contenido: { type: dataTypes.STRING },
         usuario_id: { type: dataTypes.INTEGER },
         producto_id: { type: dataTypes.INTEGER  }

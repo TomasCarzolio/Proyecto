@@ -29,8 +29,18 @@
 								<p>
 									<%= productos[i].descripcion %>
 								</p>
-								<p> Comentarios: <%= productos[i].comentarios.length %>
+								<p> 
+									Comentarios: <%= productos[i].comentarios.length %>
 								</p>
+								<% if (locals.me && me.id == productos[i].usuario_id){ %> 
+									<p> 	 
+										<a href="/users/me">Dueño: <%= productos[i].usuario.nombreUsuario %></a>
+									</p>
+								<% } else { %> 
+									<p> 	 
+									<a href="/users/<%= productos[i].usuario.id %> ">Dueño: <%= productos[i].usuario.nombreUsuario %></a>
+									</p>
+									<% } %> 
 							</article>
 						</a>
 					</section>

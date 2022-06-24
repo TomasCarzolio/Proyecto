@@ -5,8 +5,8 @@ module.exports = function (sequelize, dataTypes) {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        creado : { type: dataTypes.DATE },
-        actualizado : { type: dataTypes.DATE },
+        createdAt : { type: dataTypes.DATE },
+        updatedAt : { type: dataTypes.DATE },
         artista: { type: dataTypes.STRING(100) },
         lugar: { type: dataTypes.STRING },
         fecha : { type: dataTypes.DATE },
@@ -18,7 +18,7 @@ module.exports = function (sequelize, dataTypes) {
     }
     const configs = {
         tableName: 'productos',
-        timestamps: false
+        timestamps: true
     }
     
     const Producto = sequelize.define('Producto', cols, configs);

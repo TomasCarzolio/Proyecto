@@ -14,7 +14,7 @@ const controller = {
                     });
     },
     profile: function(req, res) {
-        usuario.findByPk(req.params.profile, { include: [ { association: 'productos' } , { association : "comentarios" }] })
+        usuario.findByPk(req.params.profile, { include: {all: true, nested: false} } ) 
             .then(function (usuario) {
                 res.render('profile', { usuario});
             })
@@ -34,17 +34,22 @@ const controller = {
     },
  
     profileUpdate: function (req, res) {
-        if (req.body.contrasenia.length > 1 && req.body.contrasenia.length < 3) { throw Error('La contraseña es demasiada corta.') }
-
         if (req.file) req.body.fotoDePerfil = "/images/uploads/" + req.file.filename;
 
-        if ( req.body.contrasenia.length == 0) { req.body.contrasenia = req.session.usuario.contrasenia }
+        if ( req.body.contrasenia.length !== 0) { 
 
-        req.body.contrasenia = hasher.hashSync(req.body.contrasenia, 10);
+            if (req.body.contrasenia.length < 3) { throw Error('La contraseña es demasiada corta. Debe superar los 3 caracteres.') }
+            
+            req.body.contrasenia = hasher.hashSync(req.body.contrasenia, 10) 
         
+        } 
+
+        req.body.contrasenia = req.session.usuario.contrasenia; 
+
         usuario.update(req.body, { where: { id: req.session.usuario.id } })
             .then(function () {
-                res.redirect('/')
+                req.session.usuario.nombreUsuario = req.body.nombreUsuario;
+                res.redirect('/users/me')
             })
             .catch(function (error) {
                 res.send(error);
